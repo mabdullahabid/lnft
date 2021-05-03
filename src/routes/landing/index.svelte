@@ -87,7 +87,9 @@
       the Liquid Network
     </p>
     <div class="mt-10">
-      <a class="primary-btn" href={`/market`}>Start exploring</a>
+      <a  href={`/market`} class="edgtf-btn edgtf-btn-solid" data-text="Start exploring">
+        <span class="edgtf-btn-text">Start exploring</span>
+      </a>
     </div>
   </div>
 </div>

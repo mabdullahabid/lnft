@@ -16,7 +16,21 @@
   .menu button {
     width: auto;
     text-align: left;
+    font-family: 'Oswald-bold';
+    color:#000;
+    text-transform: uppercase;
+  }
+
+  .menu a{
     padding: 0 20px;
+  }
+
+  .menu button:hover{
+    border-bottom:1px solid #000;
+  }
+
+  .menu a.no-underline button{
+    border-bottom:none;
   }
 
   .menu .signin {
@@ -59,6 +73,7 @@
 
     .menu a {
       margin: 20px 0 0 20px;
+      font-family: 'Oswald-bold';
     }
     .menu .search {
       margin: 40px 0 0 45px;
@@ -78,7 +93,7 @@
     {#if $user.is_admin}
       <a href="/admin"><button on:click={toggle}>Admin</button></a>
     {/if}
-    <a href={`/${$user.username}`}>
+    <a href={`/${$user.username}`} class="no-underline">
       <button on:click={toggle} class="flex">
         <Avatar user={$user} />
         <div class="my-auto ml-2">{$user.full_name}</div>

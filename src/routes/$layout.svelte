@@ -1,4 +1,4 @@
-<script>
+ <script>
   import { page } from "$app/stores";
   import decode from "jwt-decode";
   import {

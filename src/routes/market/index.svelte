@@ -71,7 +71,7 @@
   <h2 class="md:mb-0">Market</h2>
 
   {#if $user && $user.is_artist}
-    <a href="/artwork/create" class="primary-btn">Submit a new artwork</a>
+    <a href="/artwork/create" class="button-transparent header-button text-white border mt-10">Submit a new artwork</a>
   {/if}
 </div>
 <div class="container mx-auto mt-10">
