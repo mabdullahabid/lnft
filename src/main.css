@@ -112,8 +112,8 @@ h3 {
   }
 
   h3 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 60px;
+    line-height: 1.016em
   }
 }
 
@@ -203,9 +203,12 @@ button {
   display: flex;
 }
 
-.secondary-btn:hover{
-  border: 1px solid #6B6B6B;
-  color: #6B6B6B;
+.secondary-btn:hover,
+.button-transparent:hover {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  display: flex;
 }
 
 .button-trans-gray {
@@ -329,15 +332,17 @@ select {
   padding-left: 0!important;
 }
 .edgtf-btn.edgtf-btn-solid span {
-position: absolute;
-  -webkit-transform: translateX(-101%);
-  -ms-transform: translateX(-101%);
-  transform: translateX(-101%);
+  position: absolute;
+  -webkit-transform: translateY(-101%);
+  -ms-transform: translateY(-101%);
+  transform: translateY(-101%);
   color: #000;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
   font-size: 35px;
+  witdth:100%;
+  text-align:center;
 }
 .edgtf-btn.edgtf-btn-solid:after {
   content: attr(data-text);
@@ -353,11 +358,11 @@ position: absolute;
   padding-right: 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  -webkit-clip-path: polygon(100% 0,100% 0,100% 100%,0 100%);
   clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
   text-align: center;
 }
 .edgtf-btn.edgtf-btn-solid:hover span {
