@@ -164,12 +164,13 @@ button {
     rgba(127, 228, 235, 1) 50%,
     rgba(110, 216, 224, 1) 100%
   );
+  text-transform: uppercase;
 }
 
 .secondary-btn,
 .button-transparent {
   height: 48px;
-  padding: 0 30px;
+  padding: 0 20px;
   font-weight: 700;
   background: none;
   border: 1px solid #000;
@@ -178,6 +179,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .secondary-btn:hover,
@@ -189,12 +191,12 @@ button {
 }
 
 .button-trans-gray {
-  border-radius: 30px;
   padding: 0.7rem 1.5rem !important;
   color: white;
   font-weight: bold;
   background: none;
   border: 1px solid gray;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
