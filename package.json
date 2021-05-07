@@ -52,5 +52,8 @@
 		"tailwindcss": "^2.0.3",
 		"uuid": "^8.3.2",
 		"wretch": "^1.7.4"
+	},
+	"dependencies": {
+		"jquery": "^3.6.0"
 	}
 }
