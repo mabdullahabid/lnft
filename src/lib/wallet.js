@@ -230,6 +230,27 @@ const fund = async (
   let { address, redeem, output } = out;
 
   let utxos = await electrs.url(`/address/${address}/utxo`).get().json();
+  for (let i = 0; i < utxos.length; i++) {
+    if (utxos[i].asset) continue;
+    let { txid, vout } = utxos[i];
+    if (!unblinded[txid]) {
+      let tx = await getTx(txid);
+      try {
+        let unblinded = await unblind(tx.outs[vout]);
+        let { asset, value } = unblinded;
+        utxos[i].asset = reverse(asset).toString("hex");
+        utxos[i].value = parseInt(value);
+        utxos[i].assetBuffer = asset;
+        unblinded[txid] = utxos[i];
+      } catch (e) {
+        utxos.splice(i, 1);
+      }
+    }
+  }
+
+  let all = utxos.filter(
+    (o) => o.asset === asset && (o.asset !== btc || o.value > DUST)
+  );
 
   utxos = shuffle(
     utxos.filter(
@@ -239,6 +260,10 @@ const fund = async (
 
   let i = 0;
   let total = 0;
+
+  if (includeConfidential === "only") {
+    amount = utxos.reduce((a, b) => a + b.value, 0) - get(fee);
+  }
 
   while (total < amount) {
     if (i >= utxos.length) {
@@ -268,7 +293,20 @@ const fund = async (
     p.addInput(input);
   }
 
-  if (total > amount) {
+  if (includeConfidential === "only") {
+    p.addOutput({
+      asset: btc,
+      nonce: Buffer.alloc(1),
+      script: singlesig().output,
+      value: amount - DUST,
+    });
+    p.addOutput({
+      asset: btc,
+      nonce: Buffer.alloc(1),
+      script: singlesig().output,
+      value: DUST,
+    });
+  } else if (total > amount) {
     if (total - amount > DUST || asset !== btc) {
       let changeIndex = p.data.outputs.length;
 
@@ -438,6 +476,25 @@ export const executeSwap = async (artwork) => {
   addFee(p);
 
   return p;
+};
+
+export const fundUnconfidential = async () => {
+  let out = singlesig();
+  let p = new Psbt();
+
+  await fund(p, out, btc, 0, 1, false, "only");
+
+  await p.blindOutputsByIndex(
+    new Map().set(0, blindingKey().privateKey),
+    new Map().set(1, blindingKey().publicKey)
+  );
+
+  addFee(p);
+
+  psbt.set(p);
+
+  p = await signAndBroadcast();
+  return p.extractTransaction();
 };
 
 export const createIssuance = async (
