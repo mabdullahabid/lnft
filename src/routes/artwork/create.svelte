@@ -293,8 +293,7 @@
     height: 320px;
   }
 
-  .upload-button img,
-  .upload-button video {
+  .upload-button img, .upload-button video {
     width: 100%;
   }
 
