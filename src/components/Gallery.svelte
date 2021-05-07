@@ -39,6 +39,18 @@
     });
 </script>
 
+<style>
+  .invisible{
+    height: 0;
+  }
+
+  .market-gallery :global(.card-link img), .market-gallery :global(.card-link video){
+    height: 350px;
+  }
+
+  
+</style>
+
 <div class="flex flex-wrap" bind:clientWidth={w}>
   {#each artworks as artwork, i (artwork.id)}
     {#if i % offset === 0}
@@ -46,7 +58,7 @@
         <h4 class="mx-auto mb-12" id={`artwork-${i}`}>{i / offset + 1}</h4>
       </div>
     {/if}
-    <div class="w-full md:w-1/2 md:p-5 lg:w-1/3 xl:w-1/4 lg:px-5 xl:px-8 mb-20">
+    <div class="market-gallery w-full md:w-1/2 sm:pr-10 lg:w-1/3 xl:w-1/4 mb-20">
       {#if artwork}
         {#if !loaded[artwork.id]}
           <LoadingPlaceholder />

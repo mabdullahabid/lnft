@@ -7,6 +7,16 @@
 
 <style>
 
+  .wallet-nav-container{
+    position: absolute;
+    z-index: 2;
+    margin-left: 5%;
+  }
+
+  .wallet-nav{
+    font-size: 15px;
+  }
+
   .wallet-nav a{
     margin-bottom: 20px;
   }
@@ -20,6 +30,11 @@
   }
 
   @media (max-width: 1023px) { 
+
+  .wallet-nav-container{
+    position: relative;
+    margin-left:0;
+  }
     .wallet-nav{
       display: flex;
       flex-direction: row;
@@ -53,26 +68,26 @@
 
 
 {#if $user}
-<div class="text-left w-full lg:w-1/4 uppercase">
-  <h2 class="mb-5"><a href="/wallet">Wallet</a></h2>
+<div class="wallet-nav-container">
+  <h2 class="mb-5 px-5 md:px-0"><a href="/wallet">Wallet</a></h2>
 
-  <div class="wallet-nav flex flex-col">
+  <div class="wallet-nav flex flex-col uppercase">
     <a href={`/${$user.username}`}>
-      <div class="flex">
+      <div class="flex flex-wrap justify-center sm:justify-start px-5 sm:px-0 items-center sm:items-start h-full">
         <Fa icon={faChevronLeft} class="my-auto mr-4" />
         <div>Back to profile</div>
       </div>
     </a>
     {#if $assets.length > 1}
     <a href="/wallet/asset">
-      <div class="flex">
+      <div class="flex flex-wrap justify-center sm:justify-start px-5 sm:px-0 items-center sm:items-start h-full">
         <Fa icon={faDollarSign} class="my-auto mr-4" />
       <div>Change Asset</div>
     </div>
     </a>
   {/if}
     <a href="/wallet/setup">
-      <div class="flex">
+      <div class="flex flex-wrap justify-center sm:justify-start px-5 sm:px-0 items-center sm:items-start h-full">
       <Fa icon={faCog} class="my-auto mr-4" />
       <div>Settings</div>
     </div>

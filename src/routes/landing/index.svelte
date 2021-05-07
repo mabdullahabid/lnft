@@ -41,7 +41,9 @@
     width: 90%;
   }
   .secondary-header {
-    height: 600px;
+    height: 600px !important;
+    width: 100%;
+    object-fit: cover;
     /*
     background-image: url("/secondary-header.jpg");
     background-position: center;
@@ -62,7 +64,7 @@
   }
 
   .header-button {
-    width: 170px;
+    width: 200px;
     border: 1px solid white;
     color: white;
     border-radius: 30px;
@@ -71,7 +73,7 @@
 
   @media only screen and (max-width: 500px) {
     .secondary-header {
-      height: 400px;
+      height: 400px !important;
     }
   }
 </style>
