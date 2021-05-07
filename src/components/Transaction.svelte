@@ -70,6 +70,15 @@
       let { hash, index } = tx.ins[i];
       let txid = reverse(hash).toString("hex");
       let input = (await electrs.url(`/tx/${txid}`).get().json()).vout[index];
+      if ($user && input.assetcommitment) {
+        await requirePassword();
+        try {
+          let { asset, value } = await unblind((await getTx(txid)).outs[index]);
+          input.asset = reverse(asset).toString("hex");
+          input.value = parseInt(value);
+        } catch (e) {}
+      }
+
       input.signed =
         p.data.inputs[i] &&
         (!!p.data.inputs[i].partialSig || !!p.data.inputs[i].finalScriptSig);
