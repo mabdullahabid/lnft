@@ -269,6 +269,19 @@
     object-fit: contain !important;
   }
 
+  .desktopImage span:nth-child(1) :global(.card-link){
+    height: auto;
+  }
+
+  .desktopImage span:nth-child(1) :global(img), .desktopImage span:nth-child(1) :global(video) {
+    width: 70vw;
+    object-fit: cover !important;
+  }
+
+  .desktopImage :global(img) {
+    object-fit: contain !important;
+  }
+
   @keyframes zoom {
     0% {
       transform: scale(0.6);
