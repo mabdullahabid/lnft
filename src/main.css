@@ -365,7 +365,7 @@ select {
   visibility: hidden;
 } 
 #edgtf-theme-cursor circle {
-  fill: #fff;
+  fill: #000;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
@@ -435,7 +435,7 @@ body.edgtf-theme-cursor input[type="text"] {
   visibility: hidden;
 }
 #edgtf-theme-cursor circle {
-  fill: #fff;
+  fill:#fff;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
