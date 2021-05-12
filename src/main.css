@@ -57,6 +57,7 @@ body {
   font-size: 17px;
   color: #525252;
   cursor: none;
+
 }
 button, a{
   cursor: none;
@@ -69,6 +70,10 @@ button, a{
   body{
     font-size: 16px;
   }
+}
+
+button, a{
+  cursor: none;
 }
 
 h1,
@@ -297,7 +302,8 @@ select {
 }
 
 /* new button style */
-.edgtf-btn {    position: relative;
+.edgtf-btn {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: auto;
@@ -318,7 +324,7 @@ select {
 .edgtf-btn.edgtf-btn-solid {
   color: #fff;
   border: 1px solid transparent;
-  min-width: 192px;
+  min-width: 350px;
   height: 56px;
   line-height: 54px;
   padding-left: 30px;
@@ -331,7 +337,7 @@ select {
   padding-left: 0!important;
 }
 .edgtf-btn.edgtf-btn-solid span {
-  position: absolute;
+position: absolute;
   -webkit-transform: translateX(-101%);
   -ms-transform: translateX(-101%);
   transform: translateX(-101%);
@@ -371,6 +377,7 @@ select {
       -webkit-clip-path: polygon(0 0,0 0,0 100%,0 100%);
   clip-path: polygon(0 0,0 0,0 100%,0 100%);
 }
+<<<<<<< HEAD
 #edgtf-theme-cursor {
   position: fixed;
   top: 0;
@@ -465,223 +472,307 @@ body.edgtf-theme-cursor input[type="text"] {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #edgtf-theme-cursor circle {
-      fill: #000;
+=======
+
+/* ==========================================================================
+   #Theme Cursor - start
+   ========================================================================== */
+
+   body.edgtf-theme-cursor #wpadminbar {
+    cursor: default;
   }
-}
-@supports (-ms-ime-align: auto) {
-  #edgtf-theme-cursor circle {
-      fill: #000;
+  
+  body.edgtf-theme-cursor #wpadminbar a,
+  body.edgtf-theme-cursor #wpadminbar input.adminbar-input {
+    cursor: pointer !important;
   }
-}
-#edgtf-theme-cursor path {
-  opacity: 0;
-  -webkit-transition: opacity 0.05s;
-  -o-transition: opacity 0.05s;
-  transition: opacity 0.05s;
-}
-#edgtf-theme-cursor path[id*="morph"] {
-  visibility: hidden;
-}
-.edgtf-moving {
-  will-change: transform;
-}
-.no-touch .edgtf-theme-cursor {
-  cursor: none !important;
-}
-.no-touch .edgtf-theme-cursor .tp-bullet,
-.no-touch .edgtf-theme-cursor a,
-.no-touch .edgtf-theme-cursor button,
-.no-touch .edgtf-theme-cursor input {
-  cursor: none !important;
-}
-#edgtf-theme-cursor.edgtf-visible {
-  visibility: visible;
-}
-#edgtf-theme-cursor.edgtf-hovering circle {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-flame {
-  mix-blend-mode: unset;
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-flame circle {
-  fill: #000;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-flame #edgtf-cursor-flame {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-cart {
-  mix-blend-mode: unset;
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-cart circle {
-  fill: #000;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-cart #edgtf-cursor-cart {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-close {
-  mix-blend-mode: unset;
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-close circle {
-  fill: #000;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-close #edgtf-cursor-close {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-move {
-  mix-blend-mode: unset;
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-move circle {
-  fill: #000;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-move #edgtf-cursor-move {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-eye {
-  mix-blend-mode: unset;
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-eye circle {
-  fill: #000;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#edgtf-theme-cursor.edgtf-visible.edgtf-eye #edgtf-cursor-eye {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-@supports (not (-ms-high-contrast: none)) and (not (-ms-ime-align: auto)) {
-  #edgtf-theme-cursor.edgtf-override {
+  
+  #edgtf-theme-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    visibility: hidden;
+  }
+  
+>>>>>>> worked on css chages for the cursur
+  #edgtf-theme-cursor circle {
+    fill: #fff;
+      -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transform: scale(.5);
+      -ms-transform: scale(.5);
+      transform: scale(.5);
+      -webkit-transition: -webkit-transform .2s;
+      transition: -webkit-transform .2s;
+      -o-transition: transform .2s;
+      transition: transform .2s;
+      transition: transform .2s,-webkit-transform .2s;
+  }
+  
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #edgtf-theme-cursor {
+      /* IE10+ CSS styles go here */
+    }
+  
+    #edgtf-theme-cursor circle {
+      fill: #000;
+    }
+  }
+  
+  @supports (-ms-ime-align: auto) {
+    #edgtf-theme-cursor circle {
+      fill: #000;
+    }
+  }
+  
+  #edgtf-theme-cursor path {
+    opacity: 0;
+    -webkit-transition: opacity .05s;
+    -o-transition: opacity .05s;
+    transition: opacity .05s;
+  }
+  
+  #edgtf-theme-cursor path[id*='morph'] {
+    visibility: hidden;
+  }
+  
+  .edgtf-moving {
+    will-change: transform;
+  }
+  
+  .no-touch .edgtf-theme-cursor {
+    cursor: none !important;
+  }
+  
+  .no-touch .edgtf-theme-cursor a,
+  .no-touch .edgtf-theme-cursor .tp-bullet,
+  .no-touch .edgtf-theme-cursor input,
+  .no-touch .edgtf-theme-cursor button {
+    cursor: none !important;
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible {
+    visibility: visible;
+  }
+  
+  #edgtf-theme-cursor.edgtf-hovering circle {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-flame {
+    mix-blend-mode: unset;
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-flame circle {
+    fill: #000;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-flame #edgtf-cursor-flame {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-cart {
+    mix-blend-mode: unset;
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-cart circle {
+    fill: #000;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-cart #edgtf-cursor-cart {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-close {
+    mix-blend-mode: unset;
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-close circle {
+    fill: #000;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-close #edgtf-cursor-close {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-move {
+    mix-blend-mode: unset;
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-move circle {
+    fill: #000;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-move #edgtf-cursor-move {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-eye {
+    mix-blend-mode: unset;
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-eye circle {
+    fill: #000;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  #edgtf-theme-cursor.edgtf-visible.edgtf-eye #edgtf-cursor-eye {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  @supports (not (-ms-high-contrast: none)) and (not (-ms-ime-align: auto)) {
+    #edgtf-theme-cursor.edgtf-override {
       mix-blend-mode: difference !important;
-  }
-  #edgtf-theme-cursor.edgtf-override circle {
-      fill: #000 !important;
+    }
+  
+    #edgtf-theme-cursor.edgtf-override circle {
+      fill: #fff;
       -webkit-transform: scale(0.5) !important;
       -ms-transform: scale(0.5) !important;
       transform: scale(0.5) !important;
-  }
-  #edgtf-theme-cursor.edgtf-override.edgtf-hovering circle {
+    }
+  
+    #edgtf-theme-cursor.edgtf-override.edgtf-hovering circle {
       -webkit-transform: scale(1) !important;
       -ms-transform: scale(1) !important;
       transform: scale(1) !important;
-  }
-  #edgtf-theme-cursor.edgtf-override path {
+    }
+  
+    #edgtf-theme-cursor.edgtf-override path {
       opacity: 0 !important;
+    }
   }
-}
-#edgtf-theme-cursor #edgtf-cursor-flame {
-  -webkit-transform-origin: 0 100%;
-  -ms-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-animation: burn 1s infinite;
-  animation: burn 1s infinite;
-}
-@-webkit-keyframes burn {
-  0%,
-  100% {
+  
+  #edgtf-theme-cursor #edgtf-cursor-flame {
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-animation: burn 1s infinite;
+    animation: burn 1s infinite;
+  }
+  
+  @-webkit-keyframes burn {
+    0%, 100% {
       -webkit-transform: skewX(-1deg);
       transform: skewX(-1deg);
-  }
-  20% {
+    }
+  
+    20% {
       -webkit-transform: skew(-0.7deg) scaleX(0.98);
       transform: skew(-0.7deg) scaleX(0.98);
-  }
-  50% {
+    }
+  
+    50% {
       -webkit-transform: skewX(1deg) scaleX(1.07) translateX(-2px);
       transform: skewX(1deg) scaleX(1.07) translateX(-2px);
+    }
   }
-}
-@keyframes burn {
-  0%,
-  100% {
+  
+  @keyframes burn {
+    0%, 100% {
       -webkit-transform: skewX(-1deg);
       transform: skewX(-1deg);
-  }
-  20% {
+    }
+  
+    20% {
       -webkit-transform: skew(-0.7deg) scaleX(0.98);
       transform: skew(-0.7deg) scaleX(0.98);
-  }
-  50% {
+    }
+  
+    50% {
       -webkit-transform: skewX(1deg) scaleX(1.07) translateX(-2px);
       transform: skewX(1deg) scaleX(1.07) translateX(-2px);
+    }
   }
-}
-@-webkit-keyframes cursorBlink {
-  0% {
+  
+  @-webkit-keyframes cursorBlink {
+    0% {
       opacity: 1;
       -webkit-transform: scale(0.5);
       transform: scale(0.5);
-  }
-  100% {
+    }
+  
+    100% {
       opacity: 0;
       -webkit-transform: scale(1);
       transform: scale(1);
+    }
   }
-}
-@keyframes cursorBlink {
-  0% {
+  
+  @keyframes cursorBlink {
+    0% {
       opacity: 1;
       -webkit-transform: scale(0.5);
       transform: scale(0.5);
-  }
-  100% {
+    }
+  
+    100% {
       opacity: 0;
       -webkit-transform: scale(1);
       transform: scale(1);
+    }
   }
+<<<<<<< HEAD
 }
 #edgtf-theme-cursor.edgtf-blink {
   visibility: visible;
@@ -1013,6 +1104,8 @@ body.edgtf-theme-cursor input[type="text"] {
       transform: scale(1);
     }
   }
+=======
+>>>>>>> worked on css chages for the cursur
   
   #edgtf-theme-cursor.edgtf-blink {
     visibility: visible;
@@ -1038,6 +1131,7 @@ body.edgtf-theme-cursor input[type="text"] {
       }
     }
 
+<<<<<<< HEAD
 
     .hover.svelte-uiqmis.svelte-uiqmis, .tabs.svelte-uiqmis div.svelte-uiqmis:hover{
       border-bottom: 3px solid #FF005C !important;
@@ -1048,4 +1142,6 @@ body.edgtf-theme-cursor input[type="text"] {
     .toggle-checkbox.svelte-1s481vr.svelte-1s481vr:checked{
       border: 1px solid #FF005C !important;
     }
+=======
+>>>>>>> worked on css chages for the cursur
    
