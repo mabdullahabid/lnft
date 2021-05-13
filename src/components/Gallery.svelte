@@ -55,17 +55,10 @@
   
 </style>
 
-<<<<<<< HEAD
 <div class="sm:grid sm:grid-cols-2 sm:gap-10 lg:grid-cols-3" bind:clientWidth={w}>
   {#each artworks as artwork, i (artwork.id)}
     {#if i % offset === 0}
       <div class="sm:col-span-2 lg:col-span-3 w-full flex invisible h-0">
-=======
-<div class="grid gap-10 grid-cols-3" bind:clientWidth={w}>
-  {#each artworks as artwork, i (artwork.id)}
-    {#if i % offset === 0}
-      <div class="col-span-3 w-full flex invisible h-0">
->>>>>>> c172eba... 3 column grid layout
         <h4 class="mx-auto" id={`artwork-${i}`}>{i / offset + 1}</h4>
       </div>
     {/if}
