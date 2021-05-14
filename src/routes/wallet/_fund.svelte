@@ -166,7 +166,7 @@
         </div>
         <div class="flex">
           <div
-            class="break-all text-sm text-gray-300"
+            class="break-all text-sm"
             class:truncate={tab === 'lightning' && !showInvoice}
             class:invisible={loading}
             class:mx-auto={tab !== 'lightning'}>
