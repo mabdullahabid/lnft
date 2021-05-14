@@ -567,24 +567,20 @@
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col mb-4">
-                <div>
-                  <div
-                    class="mt-1 relative w-1/2 xl:w-1/3 rounded-md shadow-sm">
-                    <label>
-                      Reserve price
-                      <span class="tooltip">
-                        <i class="ml-3 text-midblue text-xl tooltip">
-                          <Fa
-                            icon={faQuestionCircle}
-                            pull="right"
-                            class="mt-1" />
-                        </i>
-                        <span
-                          class="tooltip-text bg-gray-100 shadow ml-4 rounded">
-                          Reserve price is the minimum price that you'll accept
-                          for the artwork. Setting one is optional.
-                        </span>
+            </div>
+            <div class="flex flex-col mb-4">
+              <div>
+                <div class="mt-1 relative w-1/2 xl:w-1/3 rounded-md shadow-sm">
+                  <label>
+                    Reserve price
+                    <span class="tooltip">
+                      <i class="ml-3 text-midblue text-xl tooltip">
+                        <Fa icon={faQuestionCircle} pull="right" class="mt-1" />
+                      </i>
+                      <span
+                        class="tooltip-text bg-gray-100 shadow ml-4 rounded">
+                        Reserve price is the minimum price that you'll accept
+                        for the artwork. Setting one is optional.
                       </span>
                       <input
                         class="form-input block w-full pl-7 pr-12"

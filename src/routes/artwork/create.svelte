@@ -113,6 +113,29 @@
 
     await requirePassword();
 
+    for (let i = 0; i < 1; i++) {
+      await requirePassword();
+
+      try {
+        contract = await createIssuance(artwork, domain, tx);
+      } catch (e) {
+        if (e.message.startsWith("No")) {
+          tx = await fundUnconfidential();
+          contract = await createIssuance(artwork, domain, tx);
+        } else {
+          throw e;
+        }
+      }
+
+      try {
+        success = await signAndBroadcast();
+        break;
+      } catch (e) {
+        error = e.message;
+        await new Promise((r) => setTimeout(r, 500));
+      }
+    }
+
     try {
       contract = await createIssuance(artwork, domain, tx);
 
@@ -293,7 +316,8 @@
     height: 320px;
   }
 
-  .upload-button img, .upload-button video {
+  .upload-button img,
+  .upload-button video {
     width: 100%;
   }
 

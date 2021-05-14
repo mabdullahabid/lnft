@@ -460,7 +460,7 @@
         </div>
       </div>
 
-      <div class="w-full lg:w-2/3 mx-auto">
+      <div class="w-full lg:w-2/3 xl:w-1/4 mx-auto">
         <div class="desktopImage">
           <span on:click={() => (showPopup = !showPopup)}>
             <Card {artwork} columns={1} showDetails={false} thumb={false} />
