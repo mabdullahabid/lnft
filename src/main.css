@@ -170,6 +170,11 @@ button {
 .primary-btn {
   padding: 0.8rem 1.5rem !important;
   color: #fff;
+  border-radius: 30px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   background:  #000;
   text-transform: uppercase;
