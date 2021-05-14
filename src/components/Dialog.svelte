@@ -18,8 +18,13 @@
     border: 1px solid whitesmoke;
   }
 
-  @media only screen and (max-width: 640px) {
-    .dialog-container {
+  .secondary-btn{
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+  }
+
+  @media only screen and (max-width: 640px){
+    .dialog-container{
       padding: 0;
     }
     .dialog {
