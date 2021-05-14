@@ -269,11 +269,16 @@
     object-fit: contain !important;
   }
 
+<<<<<<< HEAD
   .desktopImage span:nth-child(1) :global(.card-link){
+=======
+  .desktopImage span:nth-child(1) :global(.card-link) {
+>>>>>>> fccd4b5... bid validation
     height: auto;
   }
 
-  .desktopImage span:nth-child(1) :global(img), .desktopImage span:nth-child(1) :global(video) {
+  .desktopImage span:nth-child(1) :global(img),
+  .desktopImage span:nth-child(1) :global(video) {
     width: 70vw;
     object-fit: cover !important;
   }
@@ -350,6 +355,10 @@
           <span on:click={() => (showPopup = !showPopup)}>
             <Card {artwork} columns={1} showDetails={false} thumb={false} />
           </span>
+<<<<<<< HEAD
+=======
+          <SocialShare {artwork} />
+>>>>>>> fccd4b5... bid validation
         </div>
 
         <Sidebar bind:artwork />
@@ -418,7 +427,11 @@
           {#if artwork.reserve_price}
             <div class="my-2">
               <div class="text-sm mt-auto">Reserve Price</div>
+<<<<<<< HEAD
               <div class="flex-1 text-lg">{val(artwork.reserve_price)} {ticker}</div>
+=======
+              <div class="flex-1 text-lg">{artwork.reserve_price} {ticker}</div>
+>>>>>>> fccd4b5... bid validation
             </div>
           {/if}
           {#if artwork.bid.length && artwork.bid[0].amount}
