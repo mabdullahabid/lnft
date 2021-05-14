@@ -52,11 +52,6 @@
         </div>
       </a>
     </div>
-    <a href={`/${artwork.slug}`}>
-      <div class="w-full flex rounded-lg box-shadow thumb">
-        <ArtworkMedia {artwork} showDetails={false} />
-      </div>
-    </a>
   </div>
 {:else}
   <div class="flex flex-col px-4 mb-20 lg:w-1/3">
