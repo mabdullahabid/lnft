@@ -193,6 +193,7 @@
   <a class="secondary-btn" href={'/market'}>View gallery</a>
 </div>
 
+  <!--
 <div class="container mx-auto px-10">
   <h3>Watch the market move</h3>
 </div>
@@ -208,3 +209,4 @@
     items={artists}
     link="/top-artists" />
 </div>
+-->
