@@ -10,7 +10,6 @@
   } from "date-fns";
   import AcceptOffer from "$components/AcceptOffer";
   export let transaction;
-  
 
   let comp;
 
