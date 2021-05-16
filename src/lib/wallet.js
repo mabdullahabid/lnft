@@ -37,11 +37,8 @@ import { requirePassword } from "$lib/auth";
 
 const DUST = 1000;
 
-const SERVER_PUBKEY = Buffer.from(
-  "02e4520146cb2536acc5431d2e786f89470aa8ed3e2c61afecfc8d1e858e01eaa8",
-  "hex"
-);
-const network = networks.regtest;
+const SERVER_PUBKEY = Buffer.from("037f2e57d2017e3bf89ac391c95dfe46b3f6ff606cc2a3a04b4d9f043418c3b4bc", "hex");
+const network = networks.liquid;
 
 const singleAnyoneCanPay =
   Transaction.SIGHASH_SINGLE | Transaction.SIGHASH_ANYONECANPAY;
@@ -56,6 +53,7 @@ export const getTransactions = () => {
     poll.set([
       ...get(poll),
       {
+
         name: "txns",
         interval: setInterval(() => txns(get(user).address), 10000),
       },
