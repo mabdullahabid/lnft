@@ -35,7 +35,7 @@
 {#if artwork}
   <div
     class="latest-container w-full lg:w-1/3 pr-10"
-    on:click={() => goto(`/${artwork.slug}`)}>
+    on:click={() => goto(`/a/${artwork.slug}`)}>
     <div class="h-full box-shadow rounded-lg recentCard">
       <div class="thumb">
         <ArtworkMedia {artwork} showDetails={false} />
