@@ -121,19 +121,20 @@ setInterval(async () => {
         } catch (e) {
           console.log("Problem releasing", e);
 
-          hasura
-            .post({
-              query: close,
-              variables: {
-                id: artwork.id,
-                artwork: {
-                  auction_start: null,
-                  auction_end: null,
-                },
+        /*
+        await hasura
+          .post({
+            query: close,
+            variables: {
+              id: artwork.id,
+              artwork: {
+                auction_start: null,
+                auction_end: null,
               },
-            })
-            .json().catch(console.log);
-        }
+            },
+          })
+          .json();
+          */
       }
     }
   } catch (e) {
