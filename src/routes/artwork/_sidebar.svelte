@@ -20,7 +20,7 @@
 
 <style>
   :global(.description a) {
-    color: #3ba5ac;
+    @apply text-secondary;
   }
 
   hr {
