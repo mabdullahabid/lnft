@@ -58,17 +58,6 @@
   let uo = operationStore(subscribeAddresses);
   subscription(uo, (a, b) => b && ($users = b.users));
 
-  $: setupConfidential($user);
-  let setupConfidential = async (u) => {
-    if (!u || u.confidential) return;
-    info(
-      "Looks like your account doesn't have a confidential address, let's fix that"
-    );
-    await requirePassword();
-
-  let uo = operationStore(subscribeAddresses);
-  subscription(uo, (a, b) => b && ($users = b.users));
-
   let updateUserQuery = mutation(updateUser);
   let setup = async (r, t) => {
     if (t) {
