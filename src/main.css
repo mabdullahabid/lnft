@@ -377,103 +377,6 @@ position: absolute;
       -webkit-clip-path: polygon(0 0,0 0,0 100%,0 100%);
   clip-path: polygon(0 0,0 0,0 100%,0 100%);
 }
-<<<<<<< HEAD
-#edgtf-theme-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  mix-blend-mode: difference;
-  visibility: hidden;
-} 
-#edgtf-theme-cursor circle {
-  fill: #fff;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-#respond body.edgtf-theme-cursor input[type="text"],
-#respond body.edgtf-theme-cursor textarea,
-.edgtf-style-form body.edgtf-theme-cursor textarea,
-body.edgtf-theme-cursor #respond input[type="text"],
-body.edgtf-theme-cursor #respond textarea,
-body.edgtf-theme-cursor .edgtf-style-form textarea,
-body.edgtf-theme-cursor .wpcf7-form-control.wpcf7-date,
-body.edgtf-theme-cursor .wpcf7-form-control.wpcf7-number,
-body.edgtf-theme-cursor .wpcf7-form-control.wpcf7-quiz,
-body.edgtf-theme-cursor .wpcf7-form-control.wpcf7-select,
-body.edgtf-theme-cursor .wpcf7-form-control.wpcf7-text,
-body.edgtf-theme-cursor .wpcf7-form-control.wpcf7-textarea,
-body.edgtf-theme-cursor input[type="email"],
-body.edgtf-theme-cursor input[type="password"],
-body.edgtf-theme-cursor input[type="text"] {
-    cursor: none;
-}
-.edgtf-wrapper {
-  position: relative;
-  left: 0;
-  z-index: 1000;
-  background-color: inherit;
-  -webkit-transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
-  -o-transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
-  transition: left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1);
-}
-.edgtf-wrapper .edgtf-wrapper-inner {
-  width: 100%;
-  overflow: hidden;
-}
-.edgtf-content {
-  position: relative;
-  margin-top: 0;
-  background-color: #fff;
-  z-index: 100;
-}
-.edgtf-boxed {
-  overflow: hidden !important;
-}
-.edgtf-boxed .edgtf-wrapper {
-  width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-.touch .edgtf-boxed .edgtf-wrapper {
-  background-repeat: repeat;
-}
-#edgtf-theme-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  mix-blend-mode: difference;
-  visibility: hidden;
-}
-#edgtf-theme-cursor circle {
-  fill: #fff;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-=======
-
 /* ==========================================================================
    #Theme Cursor - start
    ========================================================================== */
@@ -497,7 +400,6 @@ body.edgtf-theme-cursor input[type="text"] {
     visibility: hidden;
   }
   
->>>>>>> worked on css chages for the cursur
   #edgtf-theme-cursor circle {
     fill: #fff;
       -webkit-transform-origin: 50% 50%;
@@ -772,7 +674,6 @@ body.edgtf-theme-cursor input[type="text"] {
       transform: scale(1);
     }
   }
-<<<<<<< HEAD
 }
 #edgtf-theme-cursor.edgtf-blink {
   visibility: visible;
@@ -1104,8 +1005,6 @@ body.edgtf-theme-cursor input[type="text"] {
       transform: scale(1);
     }
   }
-=======
->>>>>>> worked on css chages for the cursur
   
   #edgtf-theme-cursor.edgtf-blink {
     visibility: visible;
@@ -1131,8 +1030,6 @@ body.edgtf-theme-cursor input[type="text"] {
       }
     }
 
-<<<<<<< HEAD
-
     .hover.svelte-uiqmis.svelte-uiqmis, .tabs.svelte-uiqmis div.svelte-uiqmis:hover{
       border-bottom: 3px solid #FF005C !important;
     }
@@ -1142,6 +1039,8 @@ body.edgtf-theme-cursor input[type="text"] {
     .toggle-checkbox.svelte-1s481vr.svelte-1s481vr:checked{
       border: 1px solid #FF005C !important;
     }
-=======
->>>>>>> worked on css chages for the cursur
-   
+.dark-bg {
+  background-color: #445268;
+  color: #f4f4f4;
+}
+
