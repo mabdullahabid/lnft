@@ -187,11 +187,7 @@ export const multisig = (key) => {
 
   let redeem = payments.p2ms({
     m: 2,
-<<<<<<< HEAD
     pubkeys: [key.pubkey, SERVER_PUBKEY].sort((a, b) => a.toString('hex').localeCompare(b.toString('hex'))),
-=======
-    pubkeys: [key.pubkey, SERVER_PUBKEY],
->>>>>>> 4c9b10a... misc fixes
     network,
   });
 
