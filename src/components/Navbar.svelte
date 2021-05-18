@@ -42,7 +42,14 @@
 </style>
 
 <header
-  class="flex container-fluid mx-auto justify-between px-4 py-4 items-center text-gray-600">
+  class="flex container mx-auto justify-between px-4 py-4 items-center text-gray-600">
+  <nav class="flex hambuger">
+    <Hamburger bind:open={sidebar} />
+  </nav>
+  <div>
+    <a href="https://www.nftglee.com/">
+      <img src="/logo-default.svg" alt="logo" class="w-36 lg:w-48" /></a>
+  </div>
   <a class="mobileSearch" href="/market">
     <Fa icon={faSearch} />
   </a>
