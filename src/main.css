@@ -160,15 +160,9 @@ button {
 
 .primary-btn {
   padding: 0.8rem 1.5rem !important;
-  color: #444444;
+  color: #fff;
   font-weight: bold;
-  background: rgb(143, 238, 245);
-  background: linear-gradient(
-    90deg,
-    rgba(143, 238, 245, 1) 0%,
-    rgba(127, 228, 235, 1) 50%,
-    rgba(110, 216, 224, 1) 100%
-  );
+  background:  #000;
   text-transform: uppercase;
 }
 
@@ -352,6 +346,28 @@ position: absolute;
 .edgtf-btn.edgtf-btn-solid:hover:after {
       -webkit-clip-path: polygon(0 0,0 0,0 100%,0 100%);
   clip-path: polygon(0 0,0 0,0 100%,0 100%);
+}
+
+.header-button.svelte-3ktdnv.svelte-3ktdnv{
+  height: 48px;
+    padding: 0 20px;
+    font-weight: 700;
+    background: none;
+    border: 1px solid #000 !important;
+    font-size: 18px;
+    color: #000 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+}
+
+.header-button:hover{
+  background-color: #000 !important;
+    border: 1px solid #000 !important;
+    color: #fff !important;
+    display: flex;
 }
 
 /* ==========================================================================
@@ -676,4 +692,14 @@ position: absolute;
       }
     }
 
+
+    .hover.svelte-uiqmis.svelte-uiqmis, .tabs.svelte-uiqmis div.svelte-uiqmis:hover{
+      border-bottom: 3px solid #FF005C !important;
+    }
+    .toggle-checkbox.svelte-1s481vr:checked+.toggle-label.svelte-1s481vr{
+      background: #FF005C !important;
+    }
+    .toggle-checkbox.svelte-1s481vr.svelte-1s481vr:checked{
+      border: 1px solid #FF005C !important;
+    }
    

@@ -81,12 +81,12 @@
 <div class="flex mx-auto justify-center">
   <div class="header mt-10 md:mt-20 text-center">
     <h1 class="mb-10 text-left md:text-center w-2/3 md:w-full">
-      Raretoshi
+      NFT Glee
       <br />digital art
     </h1>
     <p class="md:max-w-md mx-auto text-left md:text-center">
       Upload, collect, and transact rare digital artworks as secure assets in
-      the Liquid Network
+      the Liquid Bitcoin Network
     </p>
     <div class="mt-10">
       <a  href={`/market`} class="edgtf-btn edgtf-btn-solid" data-text="Start exploring">
@@ -102,7 +102,7 @@
     <h2 class="mb-3 text-white">cryptograffiti <br />x loudsqueak</h2>
     <p>Strikes Twice</p>
     <button
-      class="button-transparent header-button text-white border mt-10"
+      class="button-transparent secondary-btn header-button text-white border mt-10"
       on:click={() => goto(`/artwork/${featuredArtworkId}`)}>
       View Artwork</button>
   </div>
