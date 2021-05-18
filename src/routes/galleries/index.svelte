@@ -5,10 +5,21 @@
   import { getTags } from "$queries/artworks";
   import { Card } from "$comp";
   import { token } from "$lib/store";
+<<<<<<< HEAD
   import galleries from "$lib/galleries";
 
   let tags = [];
 
+=======
+
+  let tags = [];
+
+  let galleries = ["bitcoin2021"];
+  let titles = {
+    bitcoin2021: "Bitcoin 2021",
+  };
+
+>>>>>>> 247fe19... switch to query for galleries page
   onMount(async () => {
     if ($token) {
       tags = (
@@ -27,8 +38,13 @@
   <div class="px-8">
     <h2>Galleries</h2>
 
+<<<<<<< HEAD
     {#each Object.keys(galleries) as gallery}
       <h2 class="text-xl mb-6 m-6 px-4"><a href={`/gallery/${gallery}`}>{galleries[gallery]}</a></h2>
+=======
+    {#each galleries as gallery}
+      <h2 class="text-xl mb-6 m-6 px-4">{titles[gallery]}</h2>
+>>>>>>> 247fe19... switch to query for galleries page
       <div class="flex flex-wrap">
         {#each tags.filter((t) => t.tag === gallery) as tag}
           <div class="w-full lg:w-1/3 px-10 mb-20">
