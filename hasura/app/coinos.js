@@ -9,7 +9,6 @@ if (process.env.LIQUID_ELECTRS_URL.includes("blockstream")) {
 }
 
 const btc = network.assetHash;
-  const fee = 100;
 
 app.post("/bitcoin", auth, async (req, res) => {
   let network = "bitcoin";
