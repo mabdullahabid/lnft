@@ -55,7 +55,7 @@ export const updateUser = {
       wallet_initialized
       ${computed}
     }
-  }`
+  }`,
 };
 
 export const topCollectors = (limit) => `query {
