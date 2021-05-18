@@ -89,7 +89,8 @@
 </script>
 
 <style>
-  .contain, .cover {
+  .contain,
+  .cover {
     position: relative;
   }
 
@@ -113,7 +114,7 @@
 
 {#if artwork.filetype && artwork.filetype.includes('video')}
   <div
-    class:inline-block={!popup}
+    class="inline-block"
     class:cover
     class:contain
     on:mouseover={over}
