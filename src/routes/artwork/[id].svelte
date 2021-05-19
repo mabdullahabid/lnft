@@ -500,5 +500,5 @@
   {/if}
 </div>
 <div class="row mx-auto flex flex-wrap flex-col-reverse md:flex-row sm:justify-between mt-10 md:mt-20">
-  <a href="" class="button-transparent header-button text-white border mt-10 align-right">Having Trouble</a>
+  <a href="https://www.nftglee.com/#contact-us" target="_blank" class="button-transparent header-button text-white border mt-10 align-right">Having Trouble</a>
 </div>
