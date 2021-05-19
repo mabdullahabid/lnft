@@ -137,8 +137,7 @@
       <br />digital art
     </h1>
     <h5 class="md:max-w-lg mx-auto text-left md:text-center">
-      Upload, collect, and transact rare digital artworks as secure assets in
-      the Liquid Bitcoin Network
+      Upload, collect, and transact rare digital art on the Liquid Network
     </h5>
     <div class="mt-10">
       <a  href={`/market`} class="edgtf-btn edgtf-btn-solid" data-text="Start exploring">
