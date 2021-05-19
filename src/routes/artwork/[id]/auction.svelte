@@ -465,7 +465,7 @@
                   </i>
                   <span class="tooltip-text bg-gray-100 shadow ml-4 rounded">
                     Setting a royalty involves transferring the artwork to a
-                    2-of-2 multisig address with Raretoshi. Our server will
+                    2-of-2 multisig address with NFT Glee. Our server will
                     co-sign on all future sales only if they pay the specified
                     royalty to the original artist and are transferring to
                     another 2-of-2 address that's constructed with our public
