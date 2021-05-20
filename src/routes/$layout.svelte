@@ -1,4 +1,4 @@
- <script>
+<script>
   import { page } from "$app/stores";
   import decode from "jwt-decode";
   import {
@@ -43,8 +43,14 @@
   <Dialog />
 
   <div id="edgtf-theme-cursor" class="">
-    <svg x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" xml:space="preserve">
-      <circle id="edgtf-cursor-dot" cx="28" cy="28" r="14"/>
+    <svg
+      x="0px"
+      y="0px"
+      width="48px"
+      height="48px"
+      viewBox="0 0 48 48"
+      xml:space="preserve">
+      <circle id="edgtf-cursor-dot" cx="28" cy="28" r="14" />
       <path id="edgtf-cursor-flame" fill="#FFFFFF" />
       <path id="edgtf-cursor-cart" fill="#FFFFFF" />
       <path id="edgtf-cursor-close" fill="#FFFFFF" />
