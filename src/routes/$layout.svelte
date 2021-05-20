@@ -30,20 +30,18 @@
   let y;
 </script>
 
-<style global src="../main.css" ></style>
-
+<style global src="../main.css" />
 <svelte:window bind:scrollY={y} />
 
 <Snack />
 
 {#if ready}
-  {#if $user || !publicPages.includes($page.path.split('/')[1])}
-    <Sidebar bind:open />
-    <div class={y > 50 ? 'sticky' : ''} in:fade>
-      <Navbar bind:sidebar={open} />
-    </div>
-    <Dialog />
-  {/if}
+  <Sidebar bind:open />
+  <div class={y > 50 ? 'sticky' : ''} in:fade>
+    <Navbar bind:sidebar={open} />
+  </div>
+  <Dialog />
+
   <div id="edgtf-theme-cursor" class="">
     <svg x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" xml:space="preserve">
       <circle id="edgtf-cursor-dot" cx="28" cy="28" r="14"/>
@@ -54,17 +52,15 @@
       <path id="edgtf-cursor-eye" fill="#FFFFFF" />
     </svg>
   </div>
+
   <main>
     <div class="mx-auto min-h-screen">
       <App>
-        <slot/>
+        <slot />
       </App>
     </div>
   </main>
 
   <Cursor />
-  
-  {#if !['/', '/login', '/register'].includes($page.path)}
-    <Footer />
-  {/if}
+  <Footer />
 {/if}
