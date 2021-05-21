@@ -17,14 +17,8 @@ import { getArtworks } from "$queries/artworks";
 import { getRecentActivity, getLatestPieces } from "$queries/transactions";
 import { makeOperation } from "@urql/core";
 
-let url, wsUrl;
-if (import.meta && import.meta.env && import.meta.env !== "production") {
-  url = import.meta.env.SNOWPACK_PUBLIC_HTTP;
-  wsUrl = import.meta.env.SNOWPACK_PUBLIC_WS;
-} else {
-  url = "https://bid.nftglee.com/v1/graphql";
-  wsUrl = "wss://bid.nftglee.com/v1/graphql";
-}
+let url = "https://bid.nftglee.com/v1/graphql";
+let wsUrl = "wss://bid.nftglee.com/v1/graphql";
 
 export const setupUrql = async () => {
   return new Promise((resolve) => {
