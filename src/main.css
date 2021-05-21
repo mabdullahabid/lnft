@@ -703,3 +703,7 @@ position: absolute;
       border: 1px solid #FF005C !important;
     }
    
+.dark-bg {
+  background-color: #445268;
+  color: #f4f4f4;
+}
