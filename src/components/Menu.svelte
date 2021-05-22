@@ -101,11 +101,6 @@
   <a href="/market"><button on:click={toggle}>Market</button></a>
   <a href="/activity"><button on:click={toggle}>Activity</button></a>
   <!--
-  <a href="/galleries"><button on:click={toggle}>Galleries</button></a>
-  -->
-  <a href="https://blog.raretoshi.com/"><button on:click={toggle}>Blog</button></a>
-  <a href="/faq"><button on:click={toggle}>FAQ</button></a>
-  <!--
   <a href="https://www.nftglee.com/blog-list/"><button on:click={toggle}>Blog</button></a>
   -->
   {#if $user}
