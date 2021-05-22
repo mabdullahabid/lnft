@@ -67,6 +67,14 @@
     }
   }
 
+ @media screen and (max-width: 1200px) {
+   .menu a{
+    padding: 0 10px;
+    font-size:16px;
+  }
+ }
+
+
   @media only screen and (max-width: 1023px) {
     .menu {
       flex-direction: column;
@@ -88,6 +96,8 @@
 
 <div class="flex justify-between items-center menu relative">
   <Search suggest={false} />
+  <a href="https://www.nftglee.com/portfolio-2/ds/"><button on:click={toggle}>DROPPING SOON</button></a>
+  <a href="https://www.nftglee.com/our-artists/"><button on:click={toggle}>ARTISTS</button></a>
   <a href="/market"><button on:click={toggle}>Market</button></a>
   <a href="/activity"><button on:click={toggle}>Activity</button></a>
   <!--
@@ -96,7 +106,7 @@
   <a href="https://blog.raretoshi.com/"><button on:click={toggle}>Blog</button></a>
   <a href="/faq"><button on:click={toggle}>FAQ</button></a>
   <!--
-  <a href="https://blog.raretoshi.com/"><button on:click={toggle}>Blog</button></a>
+  <a href="https://www.nftglee.com/blog-list/"><button on:click={toggle}>Blog</button></a>
   -->
   {#if $user}
     {#if $user.is_admin}

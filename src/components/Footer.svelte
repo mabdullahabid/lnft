@@ -8,9 +8,10 @@
     <div class="w-full lg:w-1/4 mb-10">
       <h4 class="font-bold mb-4">Follow US</h4>
       <ul class="list-none">
-        <li class="mb-2"><a href="https://twitter.com/raretoshi">Twitter</a></li>
-        <li class="mb-2"><a href="https://t.me/raretoshi">Telegram</a></li>
-        <li class="mb-2"><a href="https://blog.raretoshi.com/">Blog</a></li>
+        <li class="mb-2"><a href="https://www.facebook.com/nftglee/" target="_blank">Facebook</a></li>
+        <li class="mb-2"><a href="https://twitter.com/NFT_glee" target="_blank">Twitter</a></li>
+        <li class="mb-2"><a href="https://www.instagram.com/nft_glee/" target="_blank">Instagram</a></li>
+        <li class="mb-2"><a href="https://www.nftglee.com/" target="_blank">Blog</a></li>
       </ul>
     </div>
     <div class="w-full lg:w-1/4 mb-10">

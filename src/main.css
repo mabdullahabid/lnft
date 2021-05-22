@@ -53,7 +53,7 @@ body {
     /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-weight: normal;
-  background: rgba(255, 255, 255);;
+  background: rgba(255, 255, 255);
   font-size: 17px;
   color: #525252;
   cursor: none;
@@ -706,4 +706,24 @@ position: absolute;
 .dark-bg {
   background-color: #445268;
   color: #f4f4f4;
+}
+
+    aside.svelte-jzh4eb {
+      left: inherit !important;
+      top: 0;
+      transition: right 0.3s ease-in-out !important;
+      z-index: 10;
+      background-color: white;
+      right: -100% !important;
+  }
+
+  .open.svelte-jzh4eb{
+    left: inherit !important;
+    -webkit-animation: svelte-jzh4eb-changeColor 2s ease forwards;
+    animation: svelte-jzh4eb-changeColor 2s ease forwards;
+    right: 0 !important;
+}
+
+.menu-container.svelte-jzh4eb{
+  right: 0;
 }
