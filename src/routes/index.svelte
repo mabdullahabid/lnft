@@ -101,7 +101,7 @@
     muted
     playsinline
     loop>
-    <source src="/api/ipfs/QmTLNhbh6EhA1V3q7NR91GLnqJ5VG8BPH2GGZ6DZrRxFqe" />
+    <source src="/api/ipfs/QmY3358vMspxuHy8DNDShpGummjQ7SZ5LDe9DzizEAib9t" />
     Your browser does not support HTML5 video.
   </video>
 </div>
