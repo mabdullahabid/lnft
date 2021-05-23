@@ -108,9 +108,9 @@
   const issue = async (ticker) => {
     let contract;
     let domain =
-      $user.username === "raretoshi"
-        ? "raretoshi.com"
-        : `${$user.username}.raretoshi.com`;
+      $user.username === "nftglee"
+        ? "nftglee.com"
+        : `${$user.username}.nftglee.com`;
 
     let error, success;
 

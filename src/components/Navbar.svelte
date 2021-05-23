@@ -53,13 +53,6 @@
   <a class="mobileSearch" href="/market">
     <Fa icon={faSearch} />
   </a>
-  <div>
-    <a href="https://www.nftglee.com/">
-      <img src="/logo-default.svg" alt="logo" class="w-36 lg:w-48" /></a>
-  </div>
-  <nav class="flex hambuger">
-    <Hamburger bind:open={sidebar} />
-  </nav>
   <nav class="hidden text-bold lg:block">
     <Menu />
   </nav>

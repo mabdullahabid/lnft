@@ -10,7 +10,7 @@
   import { getRecentActivity, getLatestPieces } from "$queries/transactions";
 
   const requestPolicy = "cache-and-network";
-  let featuredArtworkId = "strikes-twice-2-e15ef";
+  let featuredArtworkId = "shadow-self-7897c";
 
   let artists = [];
   query(operationStore(topArtists(3), {}, { requestPolicy })).subscribe(
@@ -39,27 +39,11 @@
 <style>
   .header {
     width: 90%;
-    margin-top: 128px;
   }
-
-  .header .primary-btn{
-      width: 240px;
-      margin: 0 auto;
-    }
-
-  .header h5{
-    font-size: 22px;
-    line-height: 36px;
-    color: #2D2E32;
-    margin-top: 24px;
-    margin-bottom: 34px;
-  }
-
   .secondary-header {
     height: 600px !important;
     width: 100%;
     object-fit: cover;
-
     /*
     background-image: url("/secondary-header.jpg");
     background-position: center;
@@ -72,7 +56,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 36px;
+    margin-bottom: 100px;
   }
 
   .more .secondary-btn {
@@ -81,65 +65,27 @@
 
   .header-button {
     width: 200px;
-    border: 1px solid;
+    border: 1px solid white;
+    color: white;
     border-radius: 30px;
     padding: 0.7rem 1.5rem !important;
   }
 
-  h3{
-    margin-bottom: 36px;
-  }
-
-  .marg-bottom{
-    margin-bottom: 128px !important;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .header-container.marg-bottom{
-      margin-bottom: 96px !important;
-    }
-
-    .header{
-      margin-top: 64px;
-    }
-
-    h3{
-      margin-bottom: 32px;
-    }
-
-    .header h5{
-      margin-top: 24px;
-      margin-bottom: 24px;
-    }
-
-    .header .primary-btn{
-      width: 100%;
-    }
-
+  @media only screen and (max-width: 500px) {
     .secondary-header {
       height: 400px !important;
-    }
-
-    .container.more{
-      margin-top: 48px;
-    }
-
-    .marg-bottom{
-      margin-bottom: 96px !important;
     }
   }
 </style>
 
-<div class="flex header-container mx-auto justify-center marg-bottom">
-  <div class="header text-center">
-    <h1 class="text-left md:text-center md:w-full">
-      Raretoshi
-      <br />digital art
+<div class="flex mx-auto justify-center">
+  <div class="header mt-10 md:mt-20 text-center">
+    <h1 class="mb-10 text-left md:text-center w-2/3 md:w-full">
+      Forever Whale
     </h1>
-    <h5 class="md:max-w-lg mx-auto text-left md:text-center">
-      Upload, collect, and transact rare digital artworks as secure assets in
-      the Liquid Network
-    </h5>
+    <p class="md:max-w-md mx-auto text-left md:text-center">
+      Artist Collab - Paul Milinski - Olivia Steele - Anchorball - Vincent Ubags - Tommy - Ronin
+    </p>
     <div class="mt-10">
       <a  href={`/market`} class="edgtf-btn edgtf-btn-solid" data-text="Start exploring">
         <span class="edgtf-btn-text">Start exploring</span>
@@ -148,18 +94,7 @@
   </div>
 </div>
 
-<div class="flex secondary-header marg-bottom">
-  <div
-    class="container flex mx-auto flex-col justify-end md:justify-center secondary-header-text m-10 pl-6 z-10">
-    <h2 class="mb-3">cryptograffiti <br />x loudsqueak</h2>
-    <p>Strikes Twice</p>
-    <button
-      class="button-transparent header-button border mt-10"
-      on:click={() => goto(`/artwork/${featuredArtworkId}`)}>
-      View Artwork</button>
-  </div>
-
-
+<div class="flex secondary-header mt-20 mb-20 text-white">
   <video
     class="lazy cover absolute secondary-header"
     autoplay
@@ -169,11 +104,10 @@
     <source src="/api/ipfs/QmTLNhbh6EhA1V3q7NR91GLnqJ5VG8BPH2GGZ6DZrRxFqe" />
     Your browser does not support HTML5 video.
   </video>
-
 </div>
 
 
-<div class="container mx-auto px-10">
+<div class="container mx-auto px-10 mb-8">
   <h3>Recent Activity</h3>
 </div>
 <div class="container mx-auto flex overflow-x-auto">
@@ -181,36 +115,19 @@
     <RecentActivityCard {transaction} />
   {/each}
 </div>
-<div class="container more marg-bottom">
+<div class="container more">
   <a class="secondary-btn" href={'/activity'}>View more</a>
 </div>
 
-<div class="container mx-auto px-10">
+<div class="container mx-auto px-10 mb-8">
   <h3>Latest Pieces</h3>
 </div>
-<div class="container mx-auto flex pb-1 overflow-x-auto">
+<div class="container mx-auto flex pb-10 overflow-x-auto">
   {#each latest as transaction}
     <LatestPiecesCard {transaction} />
   {/each}
 </div>
-<div class="container more marg-bottom">
+<div class="container more">
   <a class="secondary-btn" href={'/market'}>View gallery</a>
 </div>
 
-  <!--
-<div class="container mx-auto px-10">
-  <h3>Watch the market move</h3>
-</div>
-<div class="container mx-auto flex flex-wrap marg-bottom">
-  <Summary
-    title="Top Collectors"
-    stat="Works collected"
-    items={collectors}
-    link="/top-collectors" />
-  <Summary
-    title="Trending artworks"
-    stat="Total shares"
-    items={artists}
-    link="/top-artists" />
-</div>
--->
