@@ -96,7 +96,7 @@
 
 <div class="flex justify-between items-center menu relative">
   <Search suggest={false} />
-  <a href="https://www.nftglee.com/portfolio-2/ds/"><button on:click={toggle}>DROPPING SOON</button></a>
+  <a href="https://www.nftglee.com/drops/"><button on:click={toggle}>DROPPING SOON</button></a>
   <a href="https://www.nftglee.com/our-artists/"><button on:click={toggle}>ARTISTS</button></a>
   <a href="/market"><button on:click={toggle}>Market</button></a>
   <a href="/activity"><button on:click={toggle}>Activity</button></a>
