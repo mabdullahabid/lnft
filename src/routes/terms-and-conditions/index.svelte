@@ -70,8 +70,8 @@
           their favourite artist through digital patronage. As an artist or fan
           you should understand exactly how NFT Glee works before you decide to
           participate. These Terms &amp; Conditions give a quick summary, but
-          you should review the NFT Glee FAQs and ask questions on the
-          NFT Glee support forums to get more information.
+          you should review the NFT Glee FAQs and ask questions on the NFT Glee
+          support forums to get more information.
         </p>
 
         <p>These Terms Set Forth a Legally Binding Agreement</p>
@@ -80,12 +80,10 @@
           Please read these Terms &amp; Conditions (“Terms'', “Agreement”) very
           carefully. This Agreement is between you (the “User(s),” “Artist(s),”
           “Fan(s)”, and collectively any entity using the Site - “Users”) and
-          GreenAddressIT Limited (“Operator”, “we”or “us”), a company registered
-          and incorporated under the laws of Malta with company number C62738
-          and whose registered office is Vincenti Buildings 28/19 (Suite 1405),
-          Strait Street, VLT1432 Valletta, Malta and a wholly-owned, indirect
-          subsidiary of Blockstream Corporation Inc, and operating the NFT Glee
-          website (“Website”) located at NFT Glee.com (“Site”).
+          NFT Glee Inc (“Operator”, “we”or “us”), a company registered and
+          incorporated in the United States whose registered office is 251
+          Little Falls Drive, Wilmington, Delaware, 19808, and operating the NFT
+          Glee website (“Website”) located at NFT Glee.com (“Site”).
         </p>
 
         <p>
@@ -270,36 +268,35 @@
         <h3>Creation of NFT Glee Items</h3>
 
         <p>
-          All Artwork (“Artwork(s)”, “Creation(s)”, “Work”) posted on the
-          NFT Glee website is associated with a unique Liquid asset exclusively
-          issued by an approved NFT Glee Artist. Each NFT Glee Item
-          (“Item(s)”, “Non-fungible token(s)”, “NFT(s)” or “Token”) is minted by
-          an Artist using the asset issuance functionality of the Liquid
-          Network. The type of media files that are currently supported and can
-          be used by Artists in NFT Glee to post their Work are jpg, png, gif
-          and mp4. When an Artist first uploads his or her Work to NFT Glee,
-          the media file is added to the IPFS network and assigned a unique
-          content identifier (CID) derived from the SHA256 hash of the file. The
-          Website hosts an IPFS node that is capable of maintaining a copy and
-          serving the media files to other nodes. Artists or anyone interested
-          could run their own IPFS node to provide this service and add
-          redundancy to the system. After adding the Artwork to the IPFS
-          network, the Artist's wallet generates a Liquid asset issuance
-          transaction containing some metadata including the title of the
-          Artwork and the CID. This issuance transaction (“Mint”) is then
-          broadcasted to be permanently recorded in the Liquid blockchain, added
-          to the Blockstream Asset Registry and the minted Token is sent to the
-          Artist’s wallet that can then be traded in the Website. This action
-          provides NFT Glee Artists and Fans with a permanent record of
-          authenticity and ownership of the Token. Since the asset registry is
-          an open source project publicly available on GitHub anyone interested
-          could clone this project and provide redundancy to the system. After a
-          Token is minted by an Artist, he or she can then propose the terms
-          (“Sale”) under which the Token will be sold to Fans (including the
-          option to add royalties to be assigned to the original Artist) in a
-          primary sale. After a NFT Glee Item is sold by the original Artist,
-          it can then be traded in a secondary market provided by the Website to
-          any NFT Glee User.
+          All Artwork (“Artwork(s)”, “Creation(s)”, “Work”) posted on the NFT
+          Glee website is associated with a unique Liquid asset exclusively
+          issued by an approved NFT Glee Artist. Each NFT Glee Item (“Item(s)”,
+          “Non-fungible token(s)”, “NFT(s)” or “Token”) is minted by an Artist
+          using the asset issuance functionality of the Liquid Network. The type
+          of media files that are currently supported and can be used by Artists
+          in NFT Glee to post their Work are jpg, png, gif and mp4. When an
+          Artist first uploads his or her Work to NFT Glee, the media file is
+          added to the IPFS network and assigned a unique content identifier
+          (CID) derived from the SHA256 hash of the file. The Website hosts an
+          IPFS node that is capable of maintaining a copy and serving the media
+          files to other nodes. Artists or anyone interested could run their own
+          IPFS node to provide this service and add redundancy to the system.
+          After adding the Artwork to the IPFS network, the Artist's wallet
+          generates a Liquid asset issuance transaction containing some metadata
+          including the title of the Artwork and the CID. This issuance
+          transaction (“Mint”) is then broadcasted to be permanently recorded in
+          the Liquid blockchain, added to the Blockstream Asset Registry and the
+          minted Token is sent to the Artist’s wallet that can then be traded in
+          the Website. This action provides NFT Glee Artists and Fans with a
+          permanent record of authenticity and ownership of the Token. Since the
+          asset registry is an open source project publicly available on GitHub
+          anyone interested could clone this project and provide redundancy to
+          the system. After a Token is minted by an Artist, he or she can then
+          propose the terms (“Sale”) under which the Token will be sold to Fans
+          (including the option to add royalties to be assigned to the original
+          Artist) in a primary sale. After a NFT Glee Item is sold by the
+          original Artist, it can then be traded in a secondary market provided
+          by the Website to any NFT Glee User.
         </p>
 
         <h3>NFT Glee Artists</h3>
@@ -308,13 +305,13 @@
           Initially, only invited Artists will be able to post Artwork in the
           Website, mint Tokens and make a primary Sale of NFT Glee Items. This
           responsibility will then be passed on to the active NFT Glee Artists.
-          Artists seeking an invitation to create and list works for sale on
-          NFT Glee must submit a request that can be found here. Please keep in
-          mind that due to current limited resources this process could
-          initially extend for months. NFT Glee has unilateral discretion in
-          curating in the Website and makes no guarantees or promises that any
-          Artists will be approved, even if the Artist was invited by a member
-          of NFT Glee to submit a request
+          Artists seeking an invitation to create and list works for sale on NFT
+          Glee must submit a request that can be found here. Please keep in mind
+          that due to current limited resources this process could initially
+          extend for months. NFT Glee has unilateral discretion in curating in
+          the Website and makes no guarantees or promises that any Artists will
+          be approved, even if the Artist was invited by a member of NFT Glee to
+          submit a request
         </p>
 
         <p>
@@ -398,8 +395,7 @@
 
         <p>
           By bidding on an Token, a Fan agrees with Operator, and represents and
-          warranties to Operator and the Artist or any other NFT Glee User
-          that:
+          warranties to Operator and the Artist or any other NFT Glee User that:
         </p>
 
         <ul>
@@ -479,8 +475,8 @@
 
         <h3>Fans and Artists</h3>
         <p>
-          By registering to use the Website, each Fan and Artist agrees with
-          Blockstream that:
+          By registering to use the Website, each Fan and Artist agrees with NFT
+          Glee that:
         </p>
         <ul>
           <li>
@@ -643,7 +639,9 @@
           or provisions.
         </p>
 
-        <p class="w-full text-center">These Terms were last updated on May 19th, 2021.</p>
+        <p class="w-full text-center">
+          These Terms were last updated on May 19th, 2021.
+        </p>
       </div>
     </div>
   </div>
