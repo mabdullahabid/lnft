@@ -107,10 +107,7 @@
   let hash, tx;
   const issue = async (ticker) => {
     let contract;
-    let domain =
-      $user.username === "nftglee"
-        ? "nftglee.com"
-        : `${$user.username}.nftglee.com`;
+    let domain = "nftglee.com";
 
     let error, success;
 
