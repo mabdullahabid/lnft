@@ -22,8 +22,8 @@ if (import.meta && import.meta.env && import.meta.env !== "production") {
   url = import.meta.env.SNOWPACK_PUBLIC_HTTP;
   wsUrl = import.meta.env.SNOWPACK_PUBLIC_WS;
 } else {
-  url = "https://bt.coinos.io/v1/graphql";
-  wsUrl = "wss://bt.coinos.io/v1/graphql";
+  url = "https://serp.coinos.io/v1/graphql";
+  wsUrl = "wss://serp.coinos.io/v1/graphql";
 }
 
 export const setupUrql = async () => {

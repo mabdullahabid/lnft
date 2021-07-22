@@ -107,7 +107,7 @@
   let hash, tx;
   const issue = async (ticker) => {
     let contract;
-    let domain = "blacktuskpaddleboards.com";
+    let domain = "serp.coinos.io";
 
     let error, success;
 
