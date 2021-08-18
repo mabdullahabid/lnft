@@ -28,6 +28,7 @@
   } from "$lib/wallet";
   import reverse from "buffer-reverse";
   import ArtworkMedia from "$components/ArtworkMedia";
+  import branding from "$lib/branding";
 
   import Form from "./_form";
   import Issuing from "./_issuing";
@@ -107,10 +108,17 @@
   let hash, tx;
   const issue = async (ticker) => {
     let contract;
+    // @todo BRANDING
+    // what is the idea of username and different domains?
+    // let domain =
+    //     $user.username === "raretoshi"
+    //         ? "raretoshi.com"
+    //         : `${$user.username.toLowerCase()}.raretoshi.com`;
+    //
     let domain =
-      $user.username === "raretoshi"
-        ? "raretoshi.com"
-        : `${$user.username.toLowerCase()}.raretoshi.com`;
+      $user.username === branding.superUserName
+        ? branding.urls.base
+        : `${$user.username.toLowerCase()}.${branding.urls.base}`;
 
     let error, success;
 
