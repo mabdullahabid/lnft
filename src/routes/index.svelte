@@ -12,6 +12,7 @@
   import LatestPiecesCard from "$components/LatestPiecesCard";
   import { err, goto } from "$lib/utils";
   import { getRecentActivity, getLatestPieces } from "$queries/transactions";
+  import branding from "$lib/branding";
 
   let featured = [];
   let recent = [];
@@ -152,7 +153,7 @@
 <div class="flex header-container mx-auto justify-center marg-bottom">
   <div class="header text-center">
     <h1 class="text-left md:text-center md:w-full">
-      Raretoshi
+      {branding.projectName}
       <br />digital art
     </h1>
     <h5 class="md:max-w-lg mx-auto text-left md:text-center">
