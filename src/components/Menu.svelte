@@ -2,6 +2,7 @@
   import Avatar from "$components/Avatar";
   import Search from "$components/Search";
   import { show, user, token } from "$lib/store";
+  import branding from "$lib/branding";
   import { logout } from "$lib/auth";
 
   export let open = false;
@@ -79,7 +80,7 @@
   <!--
   <a href="/galleries"><button on:click={toggle}>Galleries</button></a>
   -->
-  <a href="https://blog.raretoshi.com/"><button on:click={toggle}>Blog</button></a>
+  <a href="{branding.urls.external.blog}"><button on:click={toggle}>Blog</button></a>
   <a href="/faq"><button on:click={toggle}>FAQ</button></a>
   {#if $user}
     {#if $user.is_admin}
