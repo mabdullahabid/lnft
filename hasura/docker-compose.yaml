@@ -1,5 +1,12 @@
 version: '3.6'
 services:
+  ui:
+    container_name: ui
+    image: asoltys/lnft:serp
+    volumes:
+      - ./config/nginx:/etc/nginx/templates
+    environment:
+      HOST: ${DOMAIN}
   app:
     depends_on:
       - hbp
