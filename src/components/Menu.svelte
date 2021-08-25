@@ -1,9 +1,4 @@
 <script>
-  import Avatar from "$components/Avatar";
-  import Search from "$components/Search";
-  import { show, user, token } from "$lib/store";
-  import { logout } from "$lib/auth";
-
   export let open = false;
   let toggle = () => (open = !open);
 
@@ -13,7 +8,12 @@
 </script>
 
 <style>
+  .menu a {
+
+  } 
   .menu button {
+      font-weight: bold;
+      font-size: 18px;
     width: auto;
     text-align: left;
     padding: 0 20px;
@@ -72,22 +72,9 @@
   }
 </style>
 
-<div class="flex justify-between items-center menu relative">
-  <Search suggest={false} />
-  <a href="/market"><button on:click={toggle}>Market</button></a>
-  <a href="/activity"><button on:click={toggle}>Activity</button></a>
-  <!--
-  <a href="/galleries"><button on:click={toggle}>Galleries</button></a>
-  -->
-  <a href="https://blog.raretoshi.com/"><button on:click={toggle}>Blog</button></a>
-  <a href="/faq"><button on:click={toggle}>FAQ</button></a>
-  {#if $user}
-    {#if $user.is_admin}
-      <a href="/admin"><button on:click={toggle}>Admin</button></a>
-    {/if}
-    <a href={`/u/${$user.username}`}>
-      <button on:click={toggle} class="flex">
-        <Avatar user={$user} />
-      </button></a>
-  {:else}<a href="/login"><button on:click={toggle}>Sign In</button></a>{/if}
+<div class="flex menu relative flex-grow justify-center">
+  <a href="https://serpiente.io"><button on:click={toggle}>Home</button></a>
+  <a href="https://serpiente.io/tequila/"><button on:click={toggle}>Tequila</button></a>
+  <a href="/"><button on:click={toggle}>NFT</button></a>
+  <a href="https://serpiente.io/contact-us/"><button on:click={toggle}>Contact Us</button></a>
 </div>

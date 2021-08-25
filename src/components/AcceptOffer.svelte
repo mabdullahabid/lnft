@@ -9,7 +9,10 @@
   import { Psbt } from "@asoltys/liquidjs-lib";
 
   let acceptOffer$ = mutation(acceptOffer);
-  export let accept = async ({ artwork, psbt: base64 }) => {
+  export let accept = async ({ artwork, psbt: base64, user, id, amount }) => {
+
+    console.log(id, user);
+    
     try {
       await requirePassword();
       $psbt = Psbt.fromBase64(base64);
@@ -20,12 +23,11 @@
       await broadcast();
       acceptOffer$({
         id: artwork.id,
-        owner_id: artwork.bid[0].user.id,
-        amount: artwork.bid[0].amount,
+        owner_id: user.id,
         hash: $psbt.extractTransaction().getId(),
         psbt: $psbt.toBase64(),
         asset: artwork.asking_asset,
-        bid_id: artwork.bid[0].id,
+        bid_id: id,
       });
       info("Offer accepted! Sold!");
     } catch (e) {

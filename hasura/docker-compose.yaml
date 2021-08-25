@@ -1,7 +1,7 @@
 version: '3.6'
 services:
-  ui:
-    container_name: ui
+  serp:
+    container_name: serp
     image: asoltys/lnft:serp
     volumes:
       - ./data/nginx:/etc/nginx/templates
@@ -9,10 +9,10 @@ services:
       HOST: '${DOMAIN}'
     ports:
       - '80:80'
-  app:
+  lapp:
     depends_on:
       - hbp
-    container_name: app
+    container_name: lapp
     image: asoltys/lnft-server
     restart: on-failure
     environment:
@@ -104,3 +104,7 @@ services:
     volumes:
       - ${IPFS_DATA}:/data/ipfs
       - ${STORAGE_DIR}:/export
+networks: 
+  default: 
+    external: 
+      name: net
