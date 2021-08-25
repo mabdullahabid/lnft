@@ -41,7 +41,7 @@
 
   #drop-area {
     cursor: pointer;
-    border: 2px solid #6ed8e0;
+    border: 2px solid #17b7a9;
     border-radius: 10px;
     width: 80%;
     max-width: 350px;
@@ -55,7 +55,7 @@
   }
 
   #drop-area.highlight {
-    border-color: #6ed8e0;
+    border-color: #17b7a9;
   }
 
   #fileElem {

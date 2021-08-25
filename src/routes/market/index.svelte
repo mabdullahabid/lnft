@@ -30,7 +30,7 @@
       width: 90%;
       appearance: none;
       border: 0;
-      border-bottom: 1px solid #6ed8e0;
+      border-bottom: 1px solid #17b7a9;
     }
 
     select {

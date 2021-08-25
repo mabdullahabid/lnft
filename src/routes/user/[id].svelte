@@ -83,7 +83,7 @@
 
   .hover {
     @apply border-b-2;
-    border-bottom: 3px solid #6ed8e0;
+    border-bottom: 3px solid #17b7a9;
   }
 
   .tabs div {

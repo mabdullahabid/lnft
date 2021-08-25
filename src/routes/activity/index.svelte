@@ -43,7 +43,7 @@
       font-weight: bold;
     }
     button:focus {
-      border-bottom: 2px solid #6ed8e0;
+      border-bottom: 2px solid #17b7a9;
     }
   }
 </style>
