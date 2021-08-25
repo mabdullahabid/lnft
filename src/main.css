@@ -2,34 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Montserrat;
-  font-weight: normal;
-  src: url("/font/Montserrat-Regular.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: Montserrat;
-  font-weight: bold;
-  src: url("/font/Montserrat-Bold.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: OpenSans;
-  font-weight: normal;
-  src: url("/font/OpenSans-Regular.ttf") format("opentype");
-}
-
-@font-face {
-  font-family: OpenSans;
-  font-weight: bold;
-  src: url("/font/OpenSans-Bold.ttf") format("opentype");
-}
-
 body {
-  font-family: OpenSans, system-ui, -apple-system,
-    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: Cagliostro;
   font-weight: normal;
   font-size: 18px;
   line-height: 32px;
@@ -45,7 +19,6 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   color: #2d2e32;
   font-weight: bold;
 }
@@ -148,7 +121,7 @@ button {
   align-items: center;
   color: #444444;
   font-weight: bold;
-  background: rgb(143, 238, 245);
+  background: #17b7a9;
   background: linear-gradient(
     90deg,
     rgba(143, 238, 245, 1) 0%,
