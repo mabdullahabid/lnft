@@ -1,13 +1,16 @@
 <script>
   import Fa from "svelte-fa";
-  import { faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+  import {
+    faInstagram,
+    faFacebookF,
+    faTwitter,
+  } from "@fortawesome/free-brands-svg-icons";
 </script>
 
 <style>
-  .so-widget-sow-social-media-buttons-wire-2f411bb5e1b7-96
-    .sow-social-media-button {
+  .sow-social-media-button {
     display: inline-block;
-    font-size: 1.66em;
+    font-size: 1.26em;
     line-height: 1em;
     margin: 0.1em 0.05em 0.1em 0.05em;
     padding: 1em 0;
@@ -17,27 +20,54 @@
     -webkit-border-radius: 1.5em;
     -moz-border-radius: 1.5em;
     border-radius: 1.5em;
-  }
-  .so-widget-sow-social-media-buttons-wire-2f411bb5e1b7-96
-    .sow-social-media-button-facebook-0 {
     background: transparent;
     text-shadow: 0 1px 0 rgb(0 0 0 / 5%);
     border: 2px solid #333333;
     color: #333333 !important;
   }
+
+  svg {
+    @apply mx-auto;
+  }
 </style>
 
-<a
-  class="sow-social-media-button-facebook-0 sow-social-media-button"
-  title="Serpiente Ultra Premium Tequila on Facebook"
-  aria-label="Serpiente Ultra Premium Tequila on Facebook"
-  target="_blank"
-  rel="noopener noreferrer"
-  href="https://www.facebook.com/serpientequila">
-  <span>
-    <span class="sow-icon-fontawesome sow-fab">
-  <Fa icon={faInstagram} />
-</span>
-
-  </span>
-</a>
+<div class="px-2 my-24">
+  <div class="container footer mx-auto flex flex-wrap justify-center py-12">
+    <div class="mx-1">
+    <a
+      class="sow-social-media-button"
+      href="https://www.facebook.com/serpientequila">
+      <div class="flex">
+        <div class="mx-auto">
+          <Fa icon={faFacebookF} />
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="mx-1">
+    <a
+      class="sow-social-media-button"
+      href="https://www.twitter.com/serpientequila">
+      <div class="flex">
+        <div class="mx-auto">
+          <Fa icon={faTwitter} />
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="mx-1">
+    <a
+      class="sow-social-media-button"
+      href="https://instagram.com/serpientequila">
+      <div class="flex">
+        <div class="mx-auto">
+          <Fa icon={faInstagram} />
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+  <div class="flex">
+    <div class="mx-auto">Nomad Spirits Company</div>
+  </div>
+</div>
