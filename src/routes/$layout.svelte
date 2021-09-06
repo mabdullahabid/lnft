@@ -16,6 +16,7 @@
   import { fade } from "svelte/transition";
   import { publicPages } from "$lib/utils";
   import Head from "$components/Head";
+  import "./layout.css";
 
   let open = false;
   let ready;
