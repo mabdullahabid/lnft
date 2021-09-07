@@ -28,8 +28,10 @@ module.exports = {
     "src/lib": "/_app/lib",
     "src/icons": "/_app/icons",
     "src/queries": "/_app/queries",
+    "src/styleguide": "/_app/styleguide",
   },
   alias: {
+    $styleguide: "./src/styleguide",
     $components: "./src/components",
     $lib: "./src/lib",
     $icons: "./src/icons",
