@@ -6,10 +6,10 @@
     Avatar,
     ProgressLinear,
     Sidebar,
-    Navbar,
     Dialog,
     Footer,
   } from "$comp";
+  import Navbar from "$styleguide/components/Navbar";
   import Snack from "$components/Snack";
   import { show, user, password, token } from "$lib/store";
   import { onMount } from "svelte";
