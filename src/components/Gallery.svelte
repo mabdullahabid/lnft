@@ -1,5 +1,5 @@
 <script>
-  import Card from "$components/Card";
+  import Card from "$styleguide/components/Card";
   import { tick } from "svelte";
   import Pagination from "$components/Pagination";
   import LoadingPlaceholder from "$components/LoadingPlaceholder";
@@ -46,10 +46,10 @@
 
   .market-gallery :global(.card-link img), .market-gallery :global(.card-link video){
     height: 350px;
-  }  
+  }
 </style>
 
-<div class="sm:grid sm:grid-cols-2 sm:gap-10 lg:grid-cols-3" bind:clientWidth={w}>
+<div class="grid md:grid-cols-1 md:gap-16 lg:grid-cols-2 lg:gap-16" bind:clientWidth={w}>
   {#each artworks as artwork, i (artwork.id)}
     <div class="market-gallery w-full mb-20">
       {#if artwork}
