@@ -9,7 +9,7 @@
     Dialog,
     Footer,
   } from "$comp";
-  import Navbar from "$styleguide/components/Navbar";
+  import Navbar from "$styleguide/components/Navbar/Navbar.svelte";
   import Snack from "$components/Snack";
   import { show, user, password, token } from "$lib/store";
   import { onMount } from "svelte";
