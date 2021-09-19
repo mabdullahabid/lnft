@@ -4,46 +4,51 @@
   export let open = false;
 </script>
 
-<style>
+<style lang="scss">
+  @import "../styleguide/theme";
+
+  @include mobileSidebarAnimations;
+
   aside {
-    left: -100%;
-    top: 0;
-    transition: left 0.3s ease-in-out;
-    z-index: 20;
-    background-color: white;
-    
+    transition: $mobile-sidebar--transition-time ease;
+    background-color: $mobile-sidebar--overlay-color;
+  }
+
+  aside.close {
+    animation: hide $mobile-sidebar--transition-time linear forwards;
+  }
+
+  aside.open {
+    animation: open $mobile-sidebar--transition-time linear forwards;
   }
 
   .menu-container{
+    transition: $mobile-sidebar--transition-time linear;
     width: 70%;
-    background-color: white; 
-    position: absolute;
-    height: 100vh;
   }
 
   .open {
-    left: 0;
-    animation: changeColor 2s ease forwards;
-  }
-
-  @media only screen and (min-width: 1023px) {
-    aside {
-      display: none;
+    transition: $mobile-sidebar--transition-time;
+    @apply left-0;
+    .menu-container {
+      @apply left-0;
     }
   }
 
-  @keyframes changeColor {
-    0%   {background-color:white;}
-    100% {background-color:rgba(3, 3, 3, 0.8);}
+  @screen lg {
+    aside {
+      @apply hidden;
+    }
   }
-  
+
 </style>
 
 <aside
-  class="fixed w-full h-full border-r-2 shadow-lg sideBar"
+  class="-left-full top-0 z-20 fixed w-full h-full shadow-lg sideBar {open ? 'open' : 'close'}"
   on:click={() => open = false}
   class:open>
-  <div class="menu-container">
+  <div class="menu-header bg-black h-14"/>
+  <div class="menu-container -left-full bg-white absolute h-screen">
     <Menu bind:open />
   </div>
 </aside>
