@@ -13,7 +13,7 @@
   import { err, goto } from "$lib/utils";
   import { getRecentActivity, getLatestPieces } from "$queries/transactions";
   import branding from "$lib/branding";
-  import Button                               from "../styleguide/components/Button.svelte";
+  import Button from "$styleguide/components/Button.svelte";
 
   let featured = [];
   let recent = [];
@@ -58,180 +58,44 @@
 </script>
 
 <style>
-  .header {
-    width: 90%;
-    margin-top: 128px;
+  @import "../styleguide/theme.scss";
+
+  .secondary-font {
+    font-family: "Audiowide", sans-serif;
   }
 
-  .header .primary-btn {
-    width: 240px;
-    margin: 0 auto;
-  }
-
-  .header h5 {
-    font-size: 22px;
-    line-height: 36px;
-    color: #2d2e32;
-    margin-top: 24px;
-    margin-bottom: 34px;
-  }
-
-  .secondary-header {
-    height: 600px !important;
-    width: 100%;
-    object-fit: cover;
-
-    /*
-    background-image: url("/secondary-header.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-     */
-  }
-
-  .container.more {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 36px;
-  }
-
-  .more .secondary-btn {
-    width: 180px;
-  }
-
-  .header-button {
-    width: 200px;
-    border: 1px solid;
-    border-radius: 30px;
-    padding: 0.7rem 1.5rem !important;
-  }
-
-  h3 {
-    margin-bottom: 36px;
-  }
-
-  .marg-bottom {
-    margin-bottom: 128px !important;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .header-container.marg-bottom {
-      margin-bottom: 96px !important;
-    }
-
-    .header {
-      margin-top: 64px;
-    }
-
-    h3 {
-      margin-bottom: 32px;
-    }
-
-    .header h5 {
-      margin-top: 24px;
-      margin-bottom: 24px;
-    }
-
-    .header .primary-btn {
-      width: 100%;
-    }
-
-    .secondary-header {
-      height: 400px !important;
-    }
-
-    .container.more {
-      margin-top: 48px;
-    }
-
-    .marg-bottom {
-      margin-bottom: 96px !important;
-    }
-  }
 </style>
 
-<div class="flex header-container mx-auto justify-center marg-bottom">
-  <div class="header text-center">
-    <h1 class="text-left md:text-center md:w-full">
-      {branding.projectName}
-      <br />
-    </h1>
-    <h5 class="md:max-w-lg mx-auto text-left md:text-center">
-      The only marketplace for NFT Experiences
-    </h5>
-    <a href={`/market`}>
-      <Button primary class="max-w-md mx-auto">Start exploring</Button>
-    </a>
-  </div>
-</div>
+<div class="min-h-screen flex header-container mx-auto justify-center items-center bg-black">
 
-{#if featured[current]}
-  <div class="flex secondary-header marg-bottom">
-    <div
-      class="container flex mx-auto flex-col justify-end md:justify-center secondary-header-text m-10 pl-6 z-10"
-      class:text-white={featured[current].white}>
-      <h2 class:text-white={featured[current].white}>
-        {featured[current].artwork.artist.username}
-      </h2>
-      <p>
-        {featured[current].artwork.title}
-        {#if featured[current].white}
-          <button
-            class="button-transparent header-button border mt-10"
-            style="border-color: white; color: white"
-            on:click={() => goto(`/a/${featured[current].artwork.slug}`)}>
-            View Artwork</button>
-        {:else}
-          <button
-            class="button-transparent header-button border mt-10"
-            on:click={() => goto(`/a/${featured[current].artwork.slug}`)}>
-            View Artwork</button>
-        {/if}
-      </p>
+  <div class="flex justify-center mx-24 -mt-32">
+    <div class="leading-normal">
+      <div class="text-gray-500 text-xl font-semibold">
+        WE ARE DISRUPTING THE NFT INDUSTRY.
+      </div>
+      <div class="text-white text-5xl secondary-font font-bold leading-normal mt-4">
+        The First marketplace<br/>
+        for NFT-Experiences
+      </div>
+      <div class="text-white text-xl secondary-font font-bold mt-4">
+        From creators for everyone
+      </div>
+      <div class="text-gray-500 text-base font-semibold mt-6">
+        An NFT marketplace with real-life experiences <br/>based on the L-BTC blockchain.
+      </div>
+      <div class="mt-8">
+        <a href="/market">
+          <Button primary class="w-32">Start Exploring</Button>
+        </a>
+      </div>
     </div>
-
-    {#if featured[current].artwork.filetype.includes('video')}
-      <video
-        in:fade
-        out:fade
-        class="lazy cover absolute secondary-header"
-        autoplay
-        muted
-        playsinline
-        loop
-        src={`/api/ipfs/${featured[current].artwork.filename}`}
-        :key={featured[current].id} />
-    {:else}
-      <img
-        in:fade
-        out:fade
-        class="lazy cover absolute secondary-header"
-        src={`/api/ipfs/${featured[current].artwork.filename}`} />
-    {/if}
+    <div class="flex flex-1 ml-20">
+      <div>
+        <a href="/market">
+          <img src="/cards.png" class="w-full max-h-96">
+        </a>
+      </div>
+    </div>
   </div>
-{/if}
 
-<div class="container mx-auto px-10">
-  <h3>Recent Activity</h3>
-</div>
-<div class="container mx-auto flex overflow-x-auto">
-  {#each recent as transaction}
-    <RecentActivityCard {transaction} />
-  {/each}
-</div>
-<div class="container more marg-bottom">
-  <a class="secondary-btn" href={'/activity'}>View more</a>
-</div>
-
-<div class="container mx-auto px-10">
-  <h3>Latest Pieces</h3>
-</div>
-<div class="container mx-auto flex pb-1 overflow-x-auto">
-  {#each latest as transaction}
-    <LatestPiecesCard {transaction} />
-  {/each}
-</div>
-<div class="container more marg-bottom">
-  <a class="secondary-btn" href={'/market'}>View gallery</a>
 </div>
