@@ -37,6 +37,9 @@
   let funding;
   let withdrawing;
 
+  $: funding = $page && $page.params && $page.params.action && $page.params.action === 'fund';
+  $: withdrawing = $page && $page.params && $page.params.action && $page.params.action === 'withdraw';
+
   let toggleFunding = () => {
     funding = !funding;
     withdrawing = false;
@@ -62,7 +65,25 @@
     getBalances();
     loading = false;
   };
+
+  let actionsBlock, y;
+
+  function scrollTo(elem) {
+    if(!elem || !($page && $page.params && $page.params.action && $page.params.action))
+      return false;
+
+    setTimeout(() => {
+      // this is height of HEADER and additional space
+      // to make Fund/Withdraw buttons visible
+      const OFFSET = 200;
+      y = elem.getBoundingClientRect().top + y - OFFSET;
+    }, 100)
+  }
+
+  $: scrollTo(actionsBlock);
 </script>
+
+<svelte:window bind:scrollY={y}/>
 
 <style>
   .dark-red {
@@ -151,7 +172,7 @@
           disabled={!balance}>Withdraw</button>
       </div>
     </div>
-    <div>
+    <div bind:this={actionsBlock}>
       <Fund bind:funding />
       <Withdraw bind:withdrawing />
       <Transactions />
