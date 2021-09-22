@@ -6,6 +6,7 @@
   import { getMnemonic } from "$lib/wallet";
   import { copy, goto } from "$lib/utils";
   import { requirePassword } from "$lib/auth";
+  import Button from "$styleguide/components/Button";
 
   let mnemonic;
   let displayMnemonic = async () => {
@@ -33,11 +34,11 @@
     padding: 7px;
   }
   .pagination:focus {
-    color: #6aced5;
+    @apply text-blue;
   }
 
   .active {
-    color: #6aced5;
+    @apply text-blue;
   }
 
   .word {
@@ -78,7 +79,7 @@
     </div>
 
     <p class="my-4">
-      <a class="secondary-color" href="" on:click={() => copy(mnemonic)}>Copy to
+      <a class="text-blue-400" href="" on:click={() => copy(mnemonic)}>Copy to
         clipboard</a>
     </p>
 
@@ -86,9 +87,9 @@
       <button
         on:click={() => (offset === 0 ? goto('/wallet/create/step1') : (offset -= 6))}
         class="w-2/4 secondary-btn m-2">Back</button>
-      <button
+      <Button primary
         on:click={() => (offset === 6 ? goto('/wallet/create/step3') : (offset += 6))}
-        class="w-2/4 primary-btn m-2">Next</button>
+        class="w-2/4 m-2">Next</Button>
     </div>
   {/if}
 </div>

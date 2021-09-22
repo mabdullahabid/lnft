@@ -4,14 +4,14 @@
   export let checked = false;
 </script>
 
-<style>
+<style lang="scss">
   .toggle-checkbox:checked {
     @apply right-0;
     border: 1px solid #6ed8e0;
     right: 0;
   }
   .toggle-checkbox:checked + .toggle-label {
-    background: #6ed8e0;
+    @apply bg-blue;
   }
 </style>
 

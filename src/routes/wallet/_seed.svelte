@@ -204,10 +204,10 @@
 
   <p class="my-4">
     {#if bulk}
-      <a class="secondary-color my-2" href="" on:click={toggle}>I want to enter
+      <a class="text-blue-400 my-2" href="" on:click={toggle}>I want to enter
         one word at a time</a>
     {:else}
-      <a class="secondary-color my-2" href="" on:click={toggle}>I want to type
+      <a class="text-blue-400 my-2" href="" on:click={toggle}>I want to type
         in a text box</a>
     {/if}
   </p>
