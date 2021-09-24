@@ -62,6 +62,7 @@
   {#if $user && $user.is_artist}
     <a href="/artwork/create">
       <Button primary>Submit a new experience</Button>
+      <br/>
     </a>
   {/if}
 </div>
