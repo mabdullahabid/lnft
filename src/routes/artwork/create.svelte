@@ -115,10 +115,7 @@
     //         ? "raretoshi.com"
     //         : `${$user.username.toLowerCase()}.raretoshi.com`;
     //
-    let domain =
-      $user.username === branding.superUserName
-        ? branding.urls.base
-        : `${$user.username.toLowerCase()}.${branding.urls.base}`;
+    let domain = "cozmos.coinos.io";
 
     let error, success;
 

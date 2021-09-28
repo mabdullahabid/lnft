@@ -18,18 +18,13 @@ import { getRecentActivity, getLatestPieces, getArtworkTransactions } from "$que
 import { makeOperation } from "@urql/core";
 
 let url, wsUrl;
-if (import.meta && import.meta.env && import.meta.env !== "production") {
-  url = import.meta.env.SNOWPACK_PUBLIC_HTTP;
-  wsUrl = import.meta.env.SNOWPACK_PUBLIC_WS;
-} else {
-  url = "https://bid2.nftglee.com/v1/graphql";
-  wsUrl = "wss://bid2.nftglee.com/v1/graphql";
-}
+url = "https://cozmos.coinos.io/v1/graphql";
+wsUrl = "wss://cozmos.coinos.io/v1/graphql";
 
 export const setupUrql = async () => {
   return new Promise((resolve) => {
     const storage = makeDefaultStorage({
-      idbName: "raretoshi", // The name of the IndexedDB database
+      idbName: "cozmos", // The name of the IndexedDB database
       maxAge: 7, // The maximum age of the persisted data in days
     });
 

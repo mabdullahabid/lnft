@@ -39,10 +39,10 @@ import { getActiveBids } from "$queries/transactions";
 const DUST = 1000;
 
 const SERVER_PUBKEY = Buffer.from(
-  "03c3722bb4260f8c449fc8f266a58348d99410a26096fba84fb15c1d66d868f87b",
+  "02bca3ee1f50706b10026ede415d0d39c4ad409555b5c3c1106a21f29f5c495a3f",
   "hex"
 );
-const network = networks.regtest;
+const network = networks.liquid;
 
 const singleAnyoneCanPay =
   Transaction.SIGHASH_SINGLE | Transaction.SIGHASH_ANYONECANPAY;
