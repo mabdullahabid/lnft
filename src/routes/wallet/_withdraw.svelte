@@ -1,8 +1,8 @@
 <script>
   import { query } from "$lib/api";
   import { tick } from "svelte";
-  import { asset, assets, balances, psbt, user, token } from "$lib/store";
-  import { broadcast, pay, keypair, requestSignature } from "$lib/wallet";
+  import { asset, assets, balances, psbt, user, token, withdrawAssetType } from "$lib/store";
+  import { broadcast, pay, keypair, requestSignature, withdraw } from "$lib/wallet";
   import { btc, err, info, sats, val, assetLabel } from "$lib/utils";
   import sign from "$lib/sign";
   import { ProgressLinear } from "$comp";
@@ -29,20 +29,29 @@
     amount = undefined;
   };
 
+  let withdrawInternal = async () => {
+    if ($asset !== btc && !artwork) artwork = { asset: $asset };
+    $psbt = await pay(artwork, to.trim(), sats($asset, amount));
+    await sign();
+
+    if (artwork && (artwork.auction_end || artwork.royalty)) {
+      $psbt = await requestSignature($psbt);
+    }
+
+    await broadcast();
+  }
+
   let send = async (e) => {
     await requirePassword();
 
     loading = true;
     try {
-      if ($asset !== btc && !artwork) artwork = { asset: $asset };
-      $psbt = await pay(artwork, to.trim(), sats($asset, amount));
-      await sign();
-
-      if (artwork && (artwork.auction_end || artwork.royalty)) {
-        $psbt = await requestSignature($psbt);
+      if($withdrawAssetType !== 'internal') {
+        // maybe we also need mnemonic
+        await withdraw(to, amount, $token, $withdrawAssetType);
+      } else {
+        await withdrawInternal()
       }
-
-      await broadcast();
 
       info("Payment sent!");
       withdrawing = false;
@@ -90,6 +99,15 @@
             placeholder={val($asset, 0)}
             bind:value={amount} />
         </div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label for="withdraw-address-type">Recipient Address Type</label>
+        <select id="withdraw-address-type" class="text-black" bind:value={$withdrawAssetType}>
+            <option value="internal">Internal</option>
+            <option value="bitcoin">BTC</option>
+            <option value="liquid">Liquid</option>
+            <option value="lightning">Lightning</option>
+        </select>
       </div>
       <div class="flex flex-col mb-4">
         <label for="address">Recipient Address</label>

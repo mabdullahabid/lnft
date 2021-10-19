@@ -550,6 +550,16 @@ export const isMultisig = ({ royalty, auction_end }) => {
   );
 };
 
+export const withdraw = async (to, amount, token, type) => {
+  let body;
+  if(type === 'lightning') body = { payreq: to, amount }
+  else body = { address: to, amount }
+
+  return api.url(`/${type}/withdraw`)
+      .auth(`Bearer ${token}`)
+      .post(body).json();
+}
+
 export const pay = async (artwork, to, amount) => {
   fee.set(100);
   if (!amount || amount <= 0) throw new Error("invalid amount");
