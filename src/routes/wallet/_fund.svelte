@@ -17,6 +17,7 @@
 
   let img;
   let tab = "liquid";
+  let amount = 1000;
 
   let showInvoice = false;
   let toggle = () => {
@@ -101,7 +102,7 @@
         .url("/lightning")
         .auth(`Bearer ${$token}`)
         .post({
-          amount: 10000,
+          amount,
           liquidAddress: $user.address,
         })
         .json());
@@ -138,6 +139,10 @@
     }
   }
 
+  input {
+  @apply rounded-lg p-2 text-black;
+    margin-top: 10px;
+  }
 </style>
 
 {#if $user && funding}
@@ -197,6 +202,14 @@
             {@html img}
           </div>
         </div>
+        {#if tab === 'lightning'}
+        <input
+                id="amount"
+                class="my-2"
+                placeholder={'Amount to receive'}
+                bind:value={amount}
+                on:change={lightning}/>
+        {/if}
         <div class="flex">
           <div
             class="break-all text-sm"

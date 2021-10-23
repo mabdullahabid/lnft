@@ -46,7 +46,7 @@
 
     loading = true;
     try {
-      if($withdrawAssetType !== 'internal') {
+      if($withdrawAssetType !== 'liquid') {
         // maybe we also need mnemonic
         await withdraw(to, amount, $token, $withdrawAssetType);
       } else {
@@ -103,7 +103,6 @@
       <div class="flex flex-col mb-4">
         <label for="withdraw-address-type">Recipient Address Type</label>
         <select id="withdraw-address-type" class="text-black" bind:value={$withdrawAssetType}>
-            <option value="internal">Internal</option>
             <option value="bitcoin">BTC</option>
             <option value="liquid">Liquid</option>
             <option value="lightning">Lightning</option>
