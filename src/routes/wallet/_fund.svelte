@@ -203,9 +203,10 @@
           </div>
         </div>
         {#if tab === 'lightning'}
-        <input
+          <label for="amount" class="mt-2">Amount to receive</label>
+          <input
                 id="amount"
-                class="my-2"
+                class="mb-2"
                 placeholder={'Amount to receive'}
                 bind:value={amount}
                 on:change={lightning}/>
