@@ -38,11 +38,8 @@ import { compareAsc, parseISO } from "date-fns";
 const DUST = 800;
 const satsPerByte = 0.1;
 
-const SERVER_PUBKEY = Buffer.from(
-  "034c99ddc3ba57f0c87de177dd646ef71e065319f9c5fceb1764948d34ddd7efe3",
-  "hex"
-);
-const network = networks.regtest;
+const serverKey = Buffer.from(import.meta.env.VITE_PUBKEY, "hex");
+const network = networks[import.meta.env.VITE_NETWORK];
 
 const singleAnyoneCanPay =
   Transaction.SIGHASH_SINGLE | Transaction.SIGHASH_ANYONECANPAY;
@@ -189,7 +186,7 @@ export const multisig = (key) => {
 
   let redeem = payments.p2ms({
     m: 2,
-    pubkeys: [key.pubkey, SERVER_PUBKEY].sort((a, b) =>
+    pubkeys: [key.pubkey, serverKey].sort((a, b) =>
       a.toString("hex").localeCompare(b.toString("hex"))
     ),
     network,
