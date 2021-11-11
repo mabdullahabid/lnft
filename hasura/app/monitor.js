@@ -250,7 +250,7 @@ const checkTransactions = async () => {
 
     if (errors) throw new Error(errors[0].message);
 
-    for (let i = 0; i < data.transactions; i++) {
+    for (let i = 0; i < data.transactions.length; i++) {
       let tx = data.transactions[i];
       await new Promise((r) => setTimeout(r, 500));
       await electrs
